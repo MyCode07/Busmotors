@@ -6,206 +6,373 @@
 
 <main>
 
-    <section class="hero" data-replace-width="768">
-        <div class="hero__container" data-replace-new-position="beforeend">
-            <div class="hero__image hom__image">
-                <img src="img/hom-hero.png" alt="">
-            </div>
+    <section class="hero fullscreen">
+        <div class="fullscreen__img">
+            <img class="hero__bgi" src="img/hero-bgi.png" alt="">
+        </div>
+        <div class="hero__container _container">
             <div class="hero__body">
-                <div class="hero-slide  _container" data-replace-old-position="beforeend">
-                    <h1>Доставка на <br> маркетплейсы</h1>
-                    <p>Доставим и сдадим ваши грузы на склад Вайлдберриз, Ozon, Яндекс.Маркет, KazanExpress,
-                        и другие маркетплейсы безупречно</p>
-                    <button class="_btn _btn-orange" data-replace-element>Рассчитать стоимость доставки
-                        <svg viewBox="0 0 22 16">
-                            <use xlink:href="@img/svg/icons.svg#btn-arrow"></use>
-                        </svg>
-                    </button>
+                <div class="hero__content" data-animate data-animate-bottom>
+                    <h1>Профессиональное переоборудование <br> Mercedes Benz Sprinter</h1>
+                    <div class="hero__btns" data-animate data-animate-bottom data-delay="0.1">
+                        <button class="_btn">Оставить заявку</button>
+                        <button class="_btn _btn-white">
+                            <svg viewBox="0 0 25 26">
+                                <use xlink:href="@img/svg/icons.svg#3d"></use>
+                            </svg>
+                            3d-тур
+                        </button>
+                    </div>
                 </div>
             </div>
-            <ol>
-                <li>Доставка от 370 Р от 1 дня</li>
-                <li class="_active"><img src="img/check.png" alt=""> Гарантия сохранности груза</li>
-                <li>Гибкая система скидок</li>
-            </ol>
-            <div class="pagination">
-                <span class="swiper-pagination-bullet-active"></span>
-                <span></span>
-                <span></span>
-                <span></span>
+        </div>
+        <svg class="hero__arrow" viewBox="0 0 33 18">
+            <use xlink:href=" @img/svg/icons.svg#down-arrow"></use>
+        </svg>
+    </section>
+
+    <section class="section projects" data-replace-width="768" data-animate data-animate-bottom>
+        <div class="cursor">
+            <div class="cursor__inner">
+                <svg width="34" height="11" viewBox="0 0 34 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.54513 5.5L7 9.77797L5.72744 11L6.55868e-08 5.5L5.72744 7.2395e-07L7 1.2229L2.54513 5.5Z"
+                        fill="black" />
+                    <path d="M31.4549 5.5L27 1.22203L28.2726 6.8299e-08L34 5.5L28.2726 11L27 9.7771L31.4549 5.5Z"
+                        fill="black" />
+                </svg>
+            </div>
+        </div>
+        <div class="section__container _container">
+            <div class="section__body" data-replace-new-position="afterend">
+                <div class="section__top" data-replace-old-position="beforeend">
+                    <h2 data-animate data-animate-bottom>наши проекты</h2>
+                    <a href="" class="_btn" data-replace-element>все проекты</a>
+                    <div class="slider-control">
+                        <button class="prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11"
+                                fill="none">
+                                <path
+                                    d="M2.54513 5.5L7 9.77797L5.72744 11L6.55868e-08 5.5L5.72744 1.02197e-06L7 1.2229L2.54513 5.5Z"
+                                    fill="white" />
+                            </svg>
+                        </button>
+                        <button class="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="7" height="11" viewBox="0 0 7 11"
+                                fill="none">
+                                <path
+                                    d="M4.45487 5.5L-9.39102e-07 1.22203L1.27256 6.8299e-08L7 5.5L1.27256 11L-8.37084e-07 9.7771L4.45487 5.5Z"
+                                    fill="white" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="section__bottom" data-animate data-animate-bottom>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="" class="projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects/project-1.png" alt="">
+                                    </div>
+                                    <h3 class="projects-card__name">Mercedes-Benz Sprinter Van</h3>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects/project-2.png" alt="">
+                                    </div>
+                                    <h3 class="projects-card__name">Mercedes-Benz Sprinter Van</h3>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects/project-3.png" alt="">
+                                    </div>
+                                    <h3 class="projects-card__name">MERCEDES-BENZ SPRINTER MAYBACH 2023</h3>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="projects-card">
+                                    <div class="projects-card__img">
+                                        <img src="img/projects/project-4.png" alt="">
+                                    </div>
+                                    <h3 class="projects-card__name">Mercedes-Benz Sprinter Van</h3>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar">
+                        <div class="swiper-scrollbar-drag"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    @@include('./html/parts/geo.html')
-
-    @@include('./html/parts/delivery.html',{
-    "text":"Доставим ваши товары из Москвы на склады маркетплейсов в следуюших городах:",
-    })
-
-    <section class="section run" id="run">
+    <section class="section advantages">
         <div class="section__container _container">
             <div class="section__body">
-                <div class="section__top">
-                    <h2>C нами вы сэкономите <br> силы, время и деньги</h2>
-                    <label class="label">Работайте с нами по принципу</label>
-                </div>
-                <div class="section__content">
-                    <div class="text-wrap">
+                <div class="section__flex">
+                    <div class="section__flex-left" data-animate data-animate-left>
+                        <p>
+                            <span>Почему</span>
+                            Bus
+                            <label>Motors</label>
+                        </p>
+                        <div>почему клиенты выбирают нашу компанию</div>
+                    </div>
+                    <div class="section__flex-right" data-animate data-animate-right>
                         <ol>
                             <li>
-                                <div class="line"></div>
-                                <div class="dot"></div>
-                                <span>Сдали груз</span>
+                                <div>
+                                    <img src="img/advantages/advantages-1.png" alt="">
+                                </div>
+                                <p>Индивидуальный подход
+                                    к каждому клиенту</p>
                             </li>
                             <li>
-                                <div class="line"></div>
-                                <div class="dot"></div>
-                                <span>Забыли о нем</span>
+                                <div>
+                                    <img src="img/advantages/advantages-2.png" alt="">
+                                </div>
+                                <p>Большой опыт работы</p>
                             </li>
                             <li>
-                                <div class="line"></div>
-                                <div class="dot"></div>
-                                <span>Получили сообщение о сдаче груза на маркетплейс</span>
+                                <div>
+                                    <img src="img/advantages/advantages-3.png" alt="">
+                                </div>
+                                <p>квалифицированный персонал</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/advantages/advantages-4.png" alt="">
+                                </div>
+                                <p>Мы строго придерживаемся установленных сроков</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/advantages/advantages-5.png" alt="">
+                                </div>
+                                <p>Предоставляем гарантию на выполненную работы</p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/advantages/advantages-6.png" alt="">
+                                </div>
+                                <p>Используем только сертифицированные материалы</p>
                             </li>
                         </ol>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    @@include('./html/parts/advantages.html')
-
-    @@include('./html/parts/big-container.html')
-
-    @@include('./html/parts/how.html')
-
-    <section class="section run">
+    <section class="section services">
         <div class="section__container _container">
             <div class="section__body">
-                <div class="section__top">
-                    <h2>Обязательно поддержим вас <br> при необходимости</h2>
-                </div>
-                <div class="section__content">
-                    <div class="text-wrap">
+                <div class="section__flex">
+                    <div class="section__flex-left" data-animate data-animate-left>
+                        <h2>Услуги</h2>
+                    </div>
+                    <div class="section__flex-right" data-animate>
                         <ol>
-                            <div>
-                                <img src="img/icons/black/system-regular-158-support.gif" alt="">
-                            </div>
-                            <li>
-                                <div class="line"></div>
-                                <div class="dot"></div>
-                                <span>Бесплатное хранение. 6 дней бесплатного хранения ваших товаров на наших складах
-                                    6 дней бесплатного хранения ваших товаров на наших складах</span>
+                            <li data-animate data-animate-right data-animate-stagger="0.1">
+                                <a href="">
+                                    <span>Профессиональное переоборудование и продажа микроавтобусов Mercedes
+                                        Benz Sprinter</span>
+                                    <svg viewBox="0 0 50 50">
+                                        <use xlink:href="@img/svg/icons.svg#link-arrow"></use>
+                                    </svg>
+                                </a>
                             </li>
-                            <li>
-                                <div class="line"></div>
-                                <div class="dot"></div>
-                                <span>Дополнительная проверка. Дополнительно проверим упаковку и маркировку ваших
-                                    товаров перед отгрузкой в маркетплейс
-                                    Дополнительно проверим упаковку и маркировку ваших товаров перед отгрузкой в
-                                    маркетплейс</span>
+                            <li data-animate data-animate-right data-animate-stagger="0.2">
+                                <a href="">
+                                    <span>Поставка автомобилей на заказ «под ключ»</span>
+                                    <svg viewBox="0 0 50 50">
+                                        <use xlink:href="@img/svg/icons.svg#link-arrow"></use>
+                                    </svg>
+                                </a>
                             </li>
-                            <li>
-                                <div class="line"></div>
-                                <div class="dot"></div>
-                                <span>Решение проблем на месте. Сообщим о проблемах при приемке и поможем решить их на
-                                    месте
-                                    Сообщим о проблемах при приемке и поможем решить их на месте</span>
+                            <li data-animate data-animate-right data-animate-stagger="0.3">
+                                <a href="">
+                                    <span>Перевозка и доставка транспортных средств по России на эвакуаторе с
+                                        прицепом</span>
+                                    <svg viewBox="0 0 50 50">
+                                        <use xlink:href="@img/svg/icons.svg#link-arrow"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li data-animate data-animate-right data-animate-stagger="0.35">
+                                <a href="">
+                                    <span>Установка оригинальной пневмоподвески на Mercedes Benz Sprinter/ V
+                                        class</span>
+                                    <svg viewBox="0 0 50 50">
+                                        <use xlink:href="@img/svg/icons.svg#link-arrow"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li data-animate data-animate-right data-animate-stagger="0.4">
+                                <a href="">
+                                    <span>Покраска Mercedes Benz Sprinter (вкл. полный окрас)</span>
+                                    <svg viewBox="0 0 50 50">
+                                        <use xlink:href="@img/svg/icons.svg#link-arrow"></use>
+                                    </svg>
+                                </a>
                             </li>
                         </ol>
+                        <a href="" class="_btn">все услуги</a>
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    @@include('./html/parts/rates.html')
+    <div class="_ticker _ticker-homepage">
+        <div class="_ticker-text">
+            <span></span>
+            <svg viewBox="0 0 137 20">
+                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
+            </svg>
+            <span></span>
+            <svg viewBox="0 0 137 20">
+                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
+            </svg>
+            <span></span>
+            <svg viewBox="0 0 137 20">
+                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
+            </svg>
+            <span></span>
+            <svg viewBox="0 0 137 20">
+                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
+            </svg>
+            <span></span>
+            <svg viewBox="0 0 137 20">
+                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
+            </svg>
+            <span></span>
+            <svg viewBox="0 0 137 20">
+                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
+            </svg>
+            <span></span>
+            <svg viewBox="0 0 137 20">
+                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
+            </svg>
+            <span></span>
+            <svg viewBox="0 0 137 20">
+                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
+            </svg>
+            <span></span>
+            <svg viewBox="0 0 137 20">
+                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
+            </svg>
+            <span></span>
+            <svg viewBox="0 0 137 20">
+                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
+            </svg>
+        </div>
+    </div>
 
-    @@include('./html/parts/offers.html')
-
-    @@include('./html/parts/offers-2.html')
-
-    @@include('./html/parts/map.html')
-
-    <section class="section consider">
+    <section class="section d3">
         <div class="section__container _container">
             <div class="section__body">
-                <div class="section__top">
-                    <h2>Что нужно учесть при отправке <br> грузов? </h2>
-                    <p> Необходимо учесть несколько моментов, от которых <br> напрямую зависит качество перевозки груза
-                    </p>
+                <h2 data-animate data-animate-bottom>3d-тур</h2>
+                <div class="d3__body" data-animate data-animate-bottom data-animate-stagger="0.1">
+                    <img src="img/3d.png" alt="">
+                    <svg viewBox="0 0 95 95">
+                        <use xlink:href="@img/svg/icons.svg#3d-logo"></use>
+                    </svg>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="section__content">
-                    <div data-accordion data-width="10000" style="--data-width:10000">
-                        <div data-accordion-item>
-                            <div data-accordion-item-title>
+    <section class="section models">
+        <div class="section__container _container">
+            <div class="section__body">
+                <h2 data-animate data-animate-left>модели</h2>
+                <ul>
+                    <li data-animate data-animate-bottom data-animate-stagger="0.1">
+                        <a href="">
+                            <span>Компактный</span>
+                            <label for="">6 метров</label>
+                        </a>
+                    </li>
+                    <li data-animate data-animate-bottom data-animate-stagger="2.2">
+                        <a href="">
+                            <span>Длинный</span>
+                            <label for="">7 метров</label>
+                        </a>
+                    </li>
+                    <li data-animate data-animate-bottom data-animate-stagger="4.3">
+                        <a href="">
+                            <span>Сверхдлинный</span>
+                            <label for="">7.5 метров</label>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cars" data-replace-width="768">
+        <div class="section__container _container">
+            <div class="section__body" data-replace-new-position="afterend">
+                <div class="section__top" data-replace-old-position="beforeend" data-animate data-animate-bottom>
+                    <h2>Mercedes Benz Sprinter в наличии <span>12</span></h2>
+                    <a href="" class="_btn" data-replace-element>все авто</a>
+                </div>
+                <div class="section__bottom">
+                    <div class="grid grid-4">
+                        <div class="grid-item" data-animate data-animate-bottom>
+                            <div class="car__card">
+                                <a href="" class="car__card-img">
+                                    <img src="img/cars/car-1.png" alt="">
+                                </a>
                                 <div>
-                                    <img src="img/icons/black/system-regular-152-sticky-note.gif" alt="">
-                                    <span>Маркировка</span>
-                                </div>
-                                <button>
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                            </div>
-                            <div data-accordion-item-body>
-                                <div data-accordion-item-height>
-                                    <div data-accordion-item-content>
-                                        <p>Маркировка должна соответсвовать виду поставки: если это монокороб, то его
-                                            размеры 60x40x40 см. Паллеты – несколько
-                                            монокоробов, размещенных на паллете 120x80 см, от 1 м3, высотой до 1,7 м
-                                        </p>
-                                        <p>Грузы, обьемом свыше 1 м3 принимаются только на палете</p>
-                                    </div>
+                                    <h3 class="car__card-name">Mercedes-Benz Sprinter Van</h3>
+                                    <p class="car__card-price">7 200 000 ₽</p>
+                                    <a href="" class="_btn">подробнее</a>
                                 </div>
                             </div>
                         </div>
-                        <div data-accordion-item>
-                            <div data-accordion-item-title>
+                        <div class="grid-item" data-animate data-animate-bottom data-animate-stagger="0.1">
+                            <div class="car__card">
+                                <a href="" class="car__card-img">
+                                    <img src="img/cars/car-2.png" alt="">
+                                </a>
                                 <div>
-                                    <img src="img/icons/black/system-regular-153-store.gif" alt="">
-                                    <span>Упаковка</span>
-                                </div>
-                                <button>
-                                    <span></span>
-                                    <span></span>
-                                </button>
-                            </div>
-                            <div data-accordion-item-body>
-                                <div data-accordion-item-height>
-                                    <div data-accordion-item-content>
-                                        <p>Маркировка должна соответсвовать виду поставки: если это монокороб, то его
-                                            размеры 60x40x40 см. Паллеты – несколько
-                                            монокоробов, размещенных на паллете 120x80 см, от 1 м3, высотой до 1,7 м
-                                        </p>
-                                        <p>Грузы, обьемом свыше 1 м3 принимаются только на палете</p>
-                                    </div>
+                                    <h3 class="car__card-name">Mercedes-Benz Sprinter Van</h3>
+                                    <p class="car__card-price">12 200 000 ₽</p>
+                                    <a href="" class="_btn">подробнее</a>
                                 </div>
                             </div>
                         </div>
-                        <div data-accordion-item>
-                            <div data-accordion-item-title>
+                        <div class="grid-item" data-animate data-animate-bottom data-animate-stagger="0.2">
+                            <div class="car__card">
+                                <a href="" class="car__card-img">
+                                    <img src="img/cars/car-3.png" alt="">
+                                </a>
                                 <div>
-                                    <img src="img/icons/black/system-regular-126-verified.gif" alt="">
-                                    <span>Страхование</span>
+                                    <h3 class="car__card-name">Mercedes-Benz Sprinter Van</h3>
+                                    <p class="car__card-price">7 200 000 ₽</p>
+                                    <a href="" class="_btn">подробнее</a>
                                 </div>
-                                <button>
-                                    <span></span>
-                                    <span></span>
-                                </button>
                             </div>
-                            <div data-accordion-item-body>
-                                <div data-accordion-item-height>
-                                    <div data-accordion-item-content>
-                                        <p>Маркировка должна соответсвовать виду поставки: если это монокороб, то его
-                                            размеры 60x40x40 см. Паллеты – несколько
-                                            монокоробов, размещенных на паллете 120x80 см, от 1 м3, высотой до 1,7 м
-                                        </p>
-                                        <p>Грузы, обьемом свыше 1 м3 принимаются только на палете</p>
-                                    </div>
+                        </div>
+                        <div class="grid-item" data-animate data-animate-bottom data-animate-stagger="0.3">
+                            <div class="car__card">
+                                <a href="" class="car__card-img">
+                                    <img src="img/cars/car-4.png" alt="">
+                                </a>
+                                <div>
+                                    <h3 class="car__card-name">Mercedes-Benz Sprinter Van </h3>
+                                    <p class="car__card-price">9 200 000 ₽</p>
+                                    <a href="" class="_btn">подробнее</a>
                                 </div>
                             </div>
                         </div>
@@ -215,23 +382,56 @@
         </div>
     </section>
 
+    <section class="section gallery" data-replace-width="768">
+        <div class="section__container _container">
+            <div class="section__body" data-replace-new-position="afterend">
+                <div class="section__top" data-replace-old-position="beforeend" data-animate data-animate-bottom>
+                    <h2>Фотогалерея</h2>
+                    <a href="" class="_btn" data-replace-element>все фото</a>
+                </div>
+                <div class="section__bottom">
+                    <div class="grid grid-4">
+                        <div class="grid-item" data-animate data-animate-bottom>
+                            <a href="img/gallery/gallery-1.png" class="gallery__img" data-fancybox>
+                                <img src="img/gallery/gallery-1.png" alt="">
+                            </a>
+                        </div>
+                        <div class="grid-item" data-animate data-animate-bottom>
+                            <a href="img/gallery/gallery-2.png" class="gallery__img" data-fancybox>
+                                <img src="img/gallery/gallery-2.png" alt="">
+                            </a>
+                        </div>
+                        <div class="grid-item" data-animate data-animate-bottom>
+                            <a href="img/gallery/gallery-3.png" class="gallery__img" data-fancybox>
+                                <img src="img/gallery/gallery-3.png" alt="">
+                            </a>
+                        </div>
+                        <div class="grid-item" data-animate data-animate-bottom>
+                            <a href="img/gallery/gallery-4.png" class="gallery__img" data-fancybox>
+                                <img src="img/gallery/gallery-4.png" alt="">
+                            </a>
+                        </div>
+                        <div class="grid-item" data-animate data-animate-bottom>
+                            <a href="img/gallery/gallery-5.png" class="gallery__img" data-fancybox>
+                                <img src="img/gallery/gallery-5.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    @@include('./html/parts/about.html')
-
-    @@include('./html/parts/clients.html')
-
-    @@include('./html/parts/guarantee.html')
-
-    @@include('./html/parts/services.html')
-
-    @@include('./html/parts/text.html')
-
-    @@include('./html/parts/reviews.html')
-
-    @@include('./html/parts/faq.html')
-
-    @@include('./html/parts/questions.html')
-
+    .<section class="section">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="section__flex">
+                    <div class="section__flex-left"></div>
+                    <div class="section__flex-right"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 </main>
 

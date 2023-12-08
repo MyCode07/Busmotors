@@ -1,23 +1,12 @@
 ._ticker {
     overflow: hidden;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     position: relative;
     width: 100vw;
     left: 50%;
     transform: translate(-50%, 0);
-    gap: 27px;
-
-    @media (max-width: 992px) {
-        gap: 15px;
-    }
-
-    &._rotate {
-        transform: translate(-50%, 0) rotate(180deg);
-        a {
-            transform: rotate(180deg);
-        }
-    }
+    background-color: $white;
 
     @media (any-hover: hover) {
         &:hover {
@@ -31,21 +20,42 @@
 
     &-text {
         display: flex;
-        justify-content: space-between;
-        gap: 27px;
+        align-items: center;
+        gap: 10px;
+        width: fit-content;
 
-        @media (max-width: 992px) {
-            gap: 15px;
+        span {
+            flex: 0 0 auto;
+            width: 2px;
+            height: 2px;
+            border-radius: 50%;
+            background-color: #212226;
+            display: block;
         }
 
-        a {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            @include adaptive-value("width", 285, 165, 1);
-            @include adaptive-value("height", 156, 90, 1);
-            background: #f7f7f7;
-            overflow: hidden;
+        svg {
+            flex: 0 0 auto;
+        }
+    }
+
+    // ._ticker-homepage
+
+    &-homepage {
+        padding: 19px 0;
+        @include adaptive-value("margin-bottom", 99, 78, 1);
+
+        svg {
+            width: 216px;
+            height: 30px;
+        }
+
+        @media (max-width: 992px) {
+            padding: 12px;
+
+            svg {
+                width: 136px;
+                height: 19px;
+            }
         }
     }
 }

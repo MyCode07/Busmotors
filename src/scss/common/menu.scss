@@ -1,0 +1,214 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+    z-index: 16;
+    overflow-y: auto;
+    padding-bottom: 90px;
+    padding-top: 112px;
+
+    transform: translate3d(100%, 0, 0);
+    transition: all 0.3s ease 0s;
+    background-color: #212226;
+    color: $white;
+
+    &._open {
+        transform: translate3d(0, 0, 0);
+    }
+    // .menu__container
+
+    &__container {
+    }
+
+    // .menu__body
+
+    &__body {
+    }
+
+    .inner-ul {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+
+    nav {
+        margin-bottom: 55px;
+        font-family: DINPro;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 16px 0;
+                width: 100%;
+                flex-wrap: wrap;
+                border-bottom: 1px solid rgba($color: $white, $alpha: 0.2);
+                transition: all 0.3s ease 0s;
+
+                a {
+                    font-family: DINPro;
+                    font-size: 24px;
+                    font-weight: 700;
+                    letter-spacing: -0.02em;
+                    text-transform: uppercase;
+                    display: block;
+                    white-space: nowrap;
+                }
+
+                button {
+                    transition: all 0.3s ease 0s;
+                    flex: 0 0 auto;
+                    margin-right: 0;
+                    flex: 1 1 auto;
+
+                    svg {
+                        transition: all 0.3s ease 0s;
+                        width: 9px;
+                        height: 6px;
+                        fill: currentColor;
+
+                        margin-left: auto;
+                    }
+                }
+
+                &[data-open] {
+                    & > .inner-ul > ul {
+                        opacity: 1;
+                        pointer-events: all;
+                        max-height: 100%;
+                        padding: 30px 0 30px 18px;
+                    }
+
+                    & > button svg {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                ul {
+                    display: block;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: all 0.3s ease 0s;
+                    position: static;
+                    width: 100%;
+                    max-height: 0;
+                    height: auto;
+
+                    & > :not(:last-child) {
+                        margin-bottom: 26px;
+                    }
+
+                    li {
+                        width: 100%;
+                        color: $white;
+                        padding: 0;
+                        border: none !important;
+
+                        a {
+                            width: 100%;
+                            white-space: wrap;
+                            font-family: "DIN";
+                            font-size: 20px;
+                            font-weight: 700;
+                            line-height: 1.1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // .menu__btns
+
+    &__btns {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 11px;
+        margin-bottom: 51px;
+
+        button {
+            width: 100%;
+        }
+    }
+
+    label {
+        color: rgba($color: $white, $alpha: 0.5);
+        font-family: DINPro;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        display: block;
+    }
+
+    // .menu__phone
+
+    &__phone {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 33px;
+
+        a {
+            color: $white;
+            font-family: DIN Condensed;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+    }
+
+    // .menu__contacts
+
+    &__contacts {
+        & > :not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+        ._btn-social {
+            display: flex;
+            gap: 9px;
+            max-width: 208px;
+            width: 100%;
+
+            span {
+                color: $white;
+                font-family: DINPro;
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: -0.02em;
+            }
+
+            svg {
+                width: 16px;
+                height: 16px;
+                flex: 0 0 auto;
+            }
+        }
+    }
+
+    ._ticker {
+        margin-bottom: 64px;
+        padding: 12px 0;
+
+        // ._ticker-text
+
+        &-text {
+           
+            svg {
+                width: 136px;
+                height: 20px;
+                flex: 0 0 auto;
+            }
+        }
+    }
+}

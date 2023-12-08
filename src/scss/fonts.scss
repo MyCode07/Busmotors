@@ -1,35 +1,28 @@
 @font-face {
-	font-family: Inter;
+	font-family: DIN;
 	font-display: swap;
-	src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-}
-@font-face {
-	font-family: Inter;
-	font-display: swap;
-	src: url("../fonts/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
-	font-weight: 500;
-	font-style: normal;
-}
-@font-face {
-	font-family: Inter;
-	font-display: swap;
-	src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+	src: url("../fonts/DIN-Condensed-Bold.woff2") format("woff2"), url("../fonts/DIN-Condensed-Bold.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
-	font-family: Inter;
+	font-family: DINPro;
 	font-display: swap;
-	src: url("../fonts/Inter-SemiBold.woff2") format("woff2"), url("../fonts/Inter-SemiBold.woff") format("woff");
-	font-weight: 600;
+	src: url("../fonts/DINPro-Bold.woff2") format("woff2"), url("../fonts/DINPro-Bold.woff") format("woff");
+	font-weight: 700;
 	font-style: normal;
 }
 @font-face {
-	font-family: InterTight;
+	font-family: DINPro;
 	font-display: swap;
-	src: url("../fonts/InterTight-Medium.woff2") format("woff2"), url("../fonts/InterTight-Medium.woff") format("woff");
+	src: url("../fonts/DINPro-Medium.woff2") format("woff2"), url("../fonts/DINPro-Medium.woff") format("woff");
 	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: DINPro;
+	font-display: swap;
+	src: url("../fonts/DINPro-Regular.woff2") format("woff2"), url("../fonts/DINPro-Regular.woff") format("woff");
+	font-weight: 400;
 	font-style: normal;
 }

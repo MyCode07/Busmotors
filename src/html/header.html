@@ -1,58 +1,88 @@
-<header class="header _fixed">
-    <div class="header__container _container">
+<header class="header _fixed"  data-animate data-animate-top>
+    <div class="header__container ">
         <div class="header__body">
-            <div class="header__left">
-                <div class="header__logo">
-                    <a href="/">
-                        <svg viewBox="0 0 137 26" class="logo-desctop">
-                            <use xlink:href="@img/svg/icons.svg#logo"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <div class="header__right">
-                <nav class="menu">
-                    <ul>
-                        <li>
-                            <a href="">Услуги</a>
-                        </li>
-                        <li>
-                            <a href="">Клиентам</a>
-                        </li>
-                        <li>
-                            <a href="">Тарифы </a>
-                        </li>
-                        <li>
-                            <a href="">Фулфилмент</a>
-                        </li>
-                        <li>
-                            <a href="">О нас</a>
-                            <ul>
-                                <li><a href="">О компании</a></li>
-                                <li><a href="">Отзывы</a></li>
-                                <li><a href="">Вопрос-ответ</a></li>
-                                <li><a href="">Новости</a></li>
-                                <li><a href="">Контакты</a></li>
+            <a href="/" class="header__mobile-phone">
+                <svg viewBox="0 0 22 22">
+                    <use xlink:href=" @img/svg/icons.svg#phone"></use>
+                </svg>
+            </a>
+            <a href="/" class="header__logo">
+                <svg viewBox="0 0 239 33">
+                    <use xlink:href="@img/svg/icons.svg#logo"></use>
+                </svg>
+            </a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="">Главная</a>
+                    </li>
+                    <li>
+                        <a href="">Услуги</a>
+                        <div class="inner-ul">
+                            <ul class="sub-menu">
+                                <li><a href="">Услуги 1</a></li>
+                                <li><a href="">Услуги 2</a></li>
+                                <li><a href="">Услуги 3</a></li>
                             </ul>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="header__phone">
-                    <a href="" class="">+7 (961) 526 25 32</a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">Авто в наличии</a>
+                        <div class="inner-ul">
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="">
+                                        Профессиональное переоборудование и продажа микроавтобусов
+                                        Mercedes Benz Sprinter
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="">Услуги 1</a></li>
+                                        <li><a href="">Услуги 2</a></li>
+                                        <li><a href="">Услуги 3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">Поставка автомобилей на заказ «под ключ»</a></li>
+                                <li>
+                                    <a href="">
+                                        Перевозка и доставка транспортных средств по России на эвакуаторе
+                                        с прицепом
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Установка оригинальной пневмоподвески на Mercedes Benz Sprinter/ V class
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        Покраска Mercedes Benz Sprinter (вкл. полный окрас)
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="">Проекты</a>
+                    </li>
+                    <li>
+                        <a href="">О нас</a>
+                    </li>
+                    <li>
+                        <a href="">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__right">
+                <a href class="_btn-social">
+                    <svg viewBox="0 0 20 20">
+                        <use xlink:href="@img/svg/icons.svg#wh"></use>
+                    </svg>
+                </a>
+                <div class="multilanguage">
+                    <button>RU</button>
+                    <button>EN</button>
                 </div>
-                <div class="header__social-btns">
-                    <a href class="_btn-social ">
-                        <svg viewBox="0 0 24 24">
-                            <use xlink:href="@img/svg/icons.svg#tg"></use>
-                        </svg>
-                    </a>
-                    <a href class="_btn-social">
-                        <svg viewBox="0 0 24 24">
-                            <use xlink:href="@img/svg/icons.svg#wh"></use>
-                        </svg>
-                    </a>
-                </div>
-                <button class="_btn _btn-orange" data-open-popup="" data-id="calculator">Калькулятор</button>
+                <a href="" class="header__phone">+7 925 767-88-00</a>
             </div>
             <button class="header__burger">
                 <span></span>

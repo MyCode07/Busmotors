@@ -1,33 +1,15 @@
 .grid {
     display: grid;
     grid-template-rows: auto;
-    gap: 20px;
 
     // .grid-4
 
     &-4 {
         grid-template-columns: repeat(4, 1fr);
+        gap: 28px;
 
-        @media (max-width: 1240px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media (max-width: 768px) {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    // .grid-3
-
-    &-3 {
-        grid-template-columns: repeat(3, 1fr);
-
-        @media (max-width: 1240px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media (max-width: 768px) {
-            grid-template-columns: 1fr;
+        @media (max-width: 1024px) {
+            gap: 18px;
         }
     }
 

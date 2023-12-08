@@ -10,29 +10,13 @@ if (sliders.length) {
         let scrollbar = section.querySelector('.swiper-scrollbar')
         let pagination = section.querySelector('.pagination')
 
-        if (section.classList.contains('how')) {
-            new Swiper(slider, {
-                modules: [
-                    Navigation
-                ],
-                slidesPerView: 'auto',
-                spaceBetween: 0,
-                centeredSlides: true,
-                navigation: {
-                    prevEl: prev,
-                    nextEl: next,
-                },
 
-            })
-        }
-        else if (section.classList.contains('reviews')) {
+        if (section.classList.contains('projects')) {
             new Swiper(slider, {
                 modules: [
                     Navigation, Pagination, Scrollbar
                 ],
-                loop: true,
                 slidesPerView: 'auto',
-                spaceBetween: 20,
 
                 navigation: {
                     prevEl: prev,
@@ -43,6 +27,15 @@ if (sliders.length) {
                     el: scrollbar,
                     hide: false,
                 },
+
+                breakpoints: {
+                    320: {
+                        spaceBetween: 20
+                    },
+                    768: {
+                        spaceBetween: 30
+                    }
+                }
             })
         }
 

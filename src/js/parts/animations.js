@@ -118,7 +118,6 @@ function animateStagger(elem) {
 const animateElemsStagger = document.querySelectorAll('[data-animate-stagger]');
 export const animateStaggerAction = () => {
     if (!animateElemsStagger.length) return
-
     animateElemsStagger.forEach(elem => {
         observerStagger.observe(elem);
     })
