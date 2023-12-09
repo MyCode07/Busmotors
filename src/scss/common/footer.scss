@@ -40,28 +40,6 @@
             border-right: 1px solid rgba($color: #fffdfd, $alpha: 0.5);
         }
 
-        a {
-            display: block;
-
-            @media (min-width: 993px) {
-                flex: 1 1 auto;
-            }
-
-            @media (max-width: 992px) {
-                margin-bottom: 42px;
-            }
-            svg {
-                width: 70px;
-                height: 70px;
-                flex: 0 0 auto;
-
-                @media (max-width: 992px) {
-                    width: 46px;
-                    height: 46px;
-                }
-            }
-        }
-
         p {
             width: 100%;
             color: $white;
@@ -74,7 +52,6 @@
             @media (min-width: 993px) {
                 max-width: 280px;
                 @include adaptive-value("font-size", 30, 24, 1);
-                @include adaptive-value("margin-bottom", 125, 53, 1);
             }
 
             @media (max-width: 992px) {
@@ -84,6 +61,29 @@
 
         span {
             width: fit-content;
+        }
+    }
+
+    // .footer__logo
+
+    &__logo {
+        display: block;
+        margin-bottom: 27px;
+
+        @media (max-width: 992px) {
+            margin-bottom: 42px;
+        }
+
+        img,
+        svg {
+            width: 70px;
+            height: 70px;
+            flex: 0 0 auto;
+
+            @media (max-width: 992px) {
+                width: 46px;
+                height: 46px;
+            }
         }
     }
 

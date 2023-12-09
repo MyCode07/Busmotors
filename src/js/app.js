@@ -5,14 +5,16 @@ import { animateAction } from "./parts/animations.js";
 import { stickyHeader } from "./parts/header.js";
 
 import "./parts/menu.js";
-import "./parts/fullscreen.js";
 import "./static/ticker.js";
+import { Fancybox } from "@fancyapps/ui";
 
 import "./parts/sliders.js";
 import "./parts/cursor.js";
 import "./parts/video.js";
+import { parallax } from "./parts/parallax.js";
 // import "./parts/animations.js";
 
+parallax();
 // accordeon();
 animateAction()
 // maskInputs('+7 (999) 999-99-99', '._mask-phone')
@@ -26,7 +28,6 @@ stickyHeader();
 //     }
 // })
 
-import { Fancybox } from "@fancyapps/ui";
 Fancybox.bind("[data-fancybox]", {
 });
 

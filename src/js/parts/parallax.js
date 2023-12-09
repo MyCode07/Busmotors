@@ -3,14 +3,15 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const fullscreenImages = document.querySelectorAll('.fullscreen__img img');
+const parallaxItems = document.querySelectorAll('.parallax-item');
 
-if (fullscreenImages.length) {
-    fullscreenImages.forEach(img => {
+export const parallax = () => {
+    if (!parallaxItems.length) return
 
+    parallaxItems.forEach(img => {
         gsap.to(img, {
             scrollTrigger: {
-                trigger: img.closest('.fullscreen'),
+                trigger: img.closest('.parallax'),
                 scrub: 1,
                 start: "top bottom",
                 end: "+=200%",

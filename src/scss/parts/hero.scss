@@ -84,12 +84,13 @@
     }
 }
 
-.fullscreen {
+.parallax {
     position: relative;
 
-    // .fullscreen__img
+    // .parallax-media
 
-    &__img {
+    video,
+    &-media {
         position: absolute;
         left: 0;
         top: 0;
@@ -104,10 +105,16 @@
             }
         }
 
-        img {
+        img,
+        video {
             width: 100%;
             height: 135%;
             object-fit: cover;
         }
+    }
+
+    // .parallax-item
+
+    &-item {
     }
 }

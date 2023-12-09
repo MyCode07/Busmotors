@@ -1,22 +1,19 @@
-
-
-// Select the elements 
-const video = document.getElementById("video");
-const videoThumbnail = document.getElementById("video-thumbnail");
-const playpause = document.getElementById("play-pause");
-const frwd = document.getElementById("skip-10");
-const bkwrd = document.getElementById("skipminus-10");
-const volume = document.getElementById("volume");
-const mutebtn = document.getElementById("mute");
-const videoContainer = document.querySelector(".video-container");
-const controls = document.querySelector(".controls");
-const progressBar = document.querySelector(".progress-bar");
-const playbackline = document.querySelector(".playback-line");
-const currentTimeRef = document.getElementById("current-time");
-const maxDuration = document.getElementById("max-duration");
-const myplay = document.querySelector(".play");
-
-if (video) {
+const videoElement = document.querySelector('section.video');
+if (videoElement) {
+    const video = videoElement.querySelector("#video");
+    const videoThumbnail = videoElement.querySelector("#video-thumbnail");
+    const playpause = videoElement.querySelector("#play-pause");
+    const frwd = videoElement.querySelector("#skip-10");
+    const bkwrd = videoElement.querySelector("#skipminus-10");
+    const volume = videoElement.querySelector("#volume");
+    const mutebtn = videoElement.querySelector("#mute");
+    const videoContainer = videoElement.querySelector(".video-container");
+    const controls = videoElement.querySelector(".controls");
+    const progressBar = videoElement.querySelector(".progress-bar");
+    const playbackline = videoElement.querySelector(".playback-line");
+    const currentTimeRef = videoElement.querySelector("#current-time");
+    const maxDuration = videoElement.querySelector("#max-duration");
+    const myplay = videoElement.querySelector(".play");
 
 
     const timeFormatter = (timeInput) => {
