@@ -1,0 +1,83 @@
+.gallery-slide {
+    .section__body {
+        position: relative;
+    }
+
+    .slider-control {
+        position: absolute;
+        width: 100%;
+        bottom: 21px;
+        left: 0;
+
+        justify-content: space-between;
+
+        .prev,
+        .next {
+            position: relative;
+            z-index: 22;
+        }
+
+        @media (max-width: 768px) {
+            display: none !important;
+        }
+    }
+
+    .swiper-slide-active {
+        border-radius: 10px;
+    }
+
+    .swiper-slide {
+        cursor: pointer;
+        z-index: 50;
+        width: fit-content;
+    }
+
+    .mySwiper2 {
+        img {
+            border-radius: 10px;
+
+            @media (min-width: 993px) {
+                height: 649px;
+            }
+
+            @media (max-width: 992px) {
+                height: 450px;
+            }
+
+            @media (max-width: 768px) {
+                height: 209px;
+            }
+        }
+    }
+
+    .mySwiper {
+        margin-top: 20px;
+
+        @media (min-width: 769px) {
+            overflow: hidden;
+            width: 1024px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 768px) {
+            width: 100vw;
+            margin-left: -16px;
+            padding-left: 16px;
+        }  
+
+        img {
+            border-radius: 5px;
+
+            @media (min-width: 993px) {
+                width: 98px;
+                height: 60px;
+            }
+
+            @media (max-width: 992px) {
+                width: 81px;
+                height: 50px;
+            }
+        }
+    }
+}

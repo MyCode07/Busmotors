@@ -61,10 +61,26 @@
 // load card
 @import "parts/cards";
 
+// load video
+@import "parts/video";
+
+// load gallery
+@import "parts/gallery";
+
+// load d3
+@import "parts/d3";
+
+// load common-hero
+@import "parts/common-hero";
+
+// load contact-page
+@import "parts/contact-page";
+
+// load gallery-slide
+@import "parts/gallery-slide";
 
 
-
-// .pages { 
+// .pages {
 //     position: fixed;
 //     top: 50%;
 //     left: 0;

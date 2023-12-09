@@ -1,0 +1,71 @@
+@@include('./html/head.html', {
+"title":"Кօнтакты",
+})
+
+@@include('./html/header.html')
+
+<main>
+
+    <section class="section contact-page">
+        <div class="section__container _container">
+            <div class="section__body">
+                <h1 data-animate data-animate-bottom> КОнтакты</h1>
+                <div class="map-iframe" id="map" data-animate data-animate-bottom>
+                    <img src="img/map.png" alt="">
+                </div>
+                <ul>
+                    <li data-animate data-animate-bottom >
+                        <svg viewBox="0 0 30 30">
+                            <use xlink:href="@img/svg/icons.svg#tel"></use>
+                        </svg>
+                        <label>Телефоны:</label>
+                        <div>
+                            <a href="">+7 925 767-88-00 </a>
+                            <a href="">+7 (906) 086-42-97 <br>
+                                WhatsApp, Viber</a>
+                            <a href="">+7 (977) 834-32-85 <br>
+                                WhatsApp, Viber</a>
+                        </div>
+                    </li>
+                    <li data-animate data-animate-bottom data-animate-stagger="0.1">
+                        <svg viewBox="0 0 29 30">
+                            <use xlink:href="@img/svg/icons.svg#contact-page-address"></use>
+                        </svg>
+                        <label>Адрес:</label>
+                        <div>
+                            <a href="">МО, Истринский район, поселок Агрогородок д.64</a>
+                        </div>
+                    </li>
+                    <li data-animate data-animate-bottom data-animate-stagger="0.2">
+                        <svg viewBox="0 0 29 30">
+                            <use xlink:href="@img/svg/icons.svg#mail"></use>
+                        </svg>
+                        <label>Почта:</label>
+                        <div>
+                            <a href="">busmotors@bk.ru</a>
+                        </div>
+                    </li>
+                    <li data-animate data-animate-bottom data-animate-stagger="0.3">
+                        <svg viewBox="0 0 29 29">
+                            <use xlink:href="@img/svg/icons.svg#time"></use>
+                        </svg>
+                        <label>Время работы:</label>
+                        <div>
+                            <span>С Понедельника по <br> Пятницу с 9:00 ­до 20:00,</span>
+                            <span>В Субботу с 9:00 до 15:00,</span>
+                            <span>Воскресенье - Выходной</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/parts/ticker.html')
+
+    @@include('./html/parts/contacts.html')
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

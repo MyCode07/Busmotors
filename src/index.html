@@ -112,64 +112,7 @@
         </div>
     </section>
 
-    <section class="section advantages">
-        <div class="section__container _container">
-            <div class="section__body">
-                <div class="section__flex">
-                    <div class="section__flex-left" data-animate data-animate-left>
-                        <p>
-                            <span>Почему</span>
-                            Bus
-                            <label>Motors</label>
-                        </p>
-                        <div>почему клиенты выбирают нашу компанию</div>
-                    </div>
-                    <div class="section__flex-right" data-animate data-animate-right>
-                        <ol>
-                            <li>
-                                <div>
-                                    <img src="img/advantages/advantages-1.png" alt="">
-                                </div>
-                                <p>Индивидуальный подход
-                                    к каждому клиенту</p>
-                            </li>
-                            <li>
-                                <div>
-                                    <img src="img/advantages/advantages-2.png" alt="">
-                                </div>
-                                <p>Большой опыт работы</p>
-                            </li>
-                            <li>
-                                <div>
-                                    <img src="img/advantages/advantages-3.png" alt="">
-                                </div>
-                                <p>квалифицированный персонал</p>
-                            </li>
-                            <li>
-                                <div>
-                                    <img src="img/advantages/advantages-4.png" alt="">
-                                </div>
-                                <p>Мы строго придерживаемся установленных сроков</p>
-                            </li>
-                            <li>
-                                <div>
-                                    <img src="img/advantages/advantages-5.png" alt="">
-                                </div>
-                                <p>Предоставляем гарантию на выполненную работы</p>
-                            </li>
-                            <li>
-                                <div>
-                                    <img src="img/advantages/advantages-6.png" alt="">
-                                </div>
-                                <p>Используем только сертифицированные материалы</p>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
+    @@include('./html/parts/advantages.html')
 
     <section class="section services">
         <div class="section__container _container">
@@ -233,64 +176,9 @@
         </div>
     </section>
 
-    <div class="_ticker _ticker-homepage">
-        <div class="_ticker-text">
-            <span></span>
-            <svg viewBox="0 0 137 20">
-                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
-            </svg>
-            <span></span>
-            <svg viewBox="0 0 137 20">
-                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
-            </svg>
-            <span></span>
-            <svg viewBox="0 0 137 20">
-                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
-            </svg>
-            <span></span>
-            <svg viewBox="0 0 137 20">
-                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
-            </svg>
-            <span></span>
-            <svg viewBox="0 0 137 20">
-                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
-            </svg>
-            <span></span>
-            <svg viewBox="0 0 137 20">
-                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
-            </svg>
-            <span></span>
-            <svg viewBox="0 0 137 20">
-                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
-            </svg>
-            <span></span>
-            <svg viewBox="0 0 137 20">
-                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
-            </svg>
-            <span></span>
-            <svg viewBox="0 0 137 20">
-                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
-            </svg>
-            <span></span>
-            <svg viewBox="0 0 137 20">
-                <use xlink:href="@img/svg/icons.svg#ticker-logo"></use>
-            </svg>
-        </div>
-    </div>
+    @@include('./html/parts/ticker.html')
 
-    <section class="section d3">
-        <div class="section__container _container">
-            <div class="section__body">
-                <h2 data-animate data-animate-bottom>3d-тур</h2>
-                <div class="d3__body" data-animate data-animate-bottom data-animate-stagger="0.1">
-                    <img src="img/3d.png" alt="">
-                    <svg viewBox="0 0 95 95">
-                        <use xlink:href="@img/svg/icons.svg#3d-logo"></use>
-                    </svg>
-                </div>
-            </div>
-        </div>
-    </section>
+    @@include('./html/parts/d3.html')
 
     <section class="section models">
         <div class="section__container _container">
@@ -529,38 +417,7 @@
         </div>
     </section>
 
-    <section class="section contacts">
-        <div class="section__container _container">
-            <div class="section__body">
-                <h2 data-animate data-animate-left>Свяжитесь <br>
-                    с нами</h2>
-                <form class="form" action="#" data-animate data-animate-right>
-                    <div class="form__row">
-                        <div data-required class="form__item">
-                            <input type="text" value="" placeholder="">
-                            <span>Ваше имя</span>
-                        </div>
-                        <div data-required class="form__item">
-                            <input type="text" value="" placeholder="">
-                            <span>Телефон</span>
-                        </div>
-                    </div>
-                    <div class="form__row">
-                        <div data-required class="form__item">
-                            <input type="text" value="" placeholder="">
-                            <span>Комментарий</span>
-                        </div>
-                    </div>
-                    <div class="form__button">
-                        <p>Отправляя форму, вы подтверждаете свое согласие на
-                            <a href=""> обработку персональных данных</a>
-                        </p>
-                        <button class="_btn">Отправить</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
+    @@include('./html/parts/contacts.html')
 
 </main>
 

@@ -10,7 +10,6 @@ if (sliders.length) {
         let scrollbar = section.querySelector('.swiper-scrollbar')
         let pagination = section.querySelector('.pagination')
 
-
         if (section.classList.contains('projects')) {
             new Swiper(slider, {
                 modules: [
@@ -38,7 +37,6 @@ if (sliders.length) {
                 }
             })
         }
-
     })
 }
 
@@ -48,4 +46,39 @@ Fancybox.bind("[data-fancybox]", {
     beforeClose: function (instance, slide) {
         console.log(slide)
     }
+});
+
+
+
+var swiper = new Swiper(".mySwiper", {
+    modules: [
+        Navigation, Pagination, Scrollbar, Thumbs
+    ],
+    slidesPerView: 'auto',
+    freeMode: true,
+    watchSlidesProgress: true,
+
+
+    breakpoints: {
+        320: {
+            spaceBetween: 4
+        },
+        768: {
+            spaceBetween: 17
+        }
+    }
+});
+
+var swiper2 = new Swiper(".mySwiper2", {
+    modules: [
+        Navigation, Pagination, Scrollbar, Thumbs
+    ],
+    spaceBetween: 10,
+    navigation: {
+        nextEl: ".next",
+        prevEl: ".prev",
+    },
+    thumbs: {
+        swiper: swiper,
+    },
 });
