@@ -1,0 +1,171 @@
+.form {
+    // .form__row
+
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
+
+        &:not(:first-of-type) {
+            @include adaptive-value("margin-top", 112, 77, 1);
+        }
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
+    }
+
+    // .form__item
+
+    &__item {
+        width: 100%;
+        border-bottom: 1px solid rgba($color: $white, $alpha: 0.5);
+        position: relative;
+
+        input,
+        textarea {
+            height: 100%;
+            padding-top: 17px;
+            width: 100%;
+            color: $white;
+            font-family: DINPro;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            display: block;
+
+            @media (max-width: 768px) {
+                font-size: 14px;
+                padding-top: 14px;
+            }
+
+            &._active,
+            &:focus,
+            &:active {
+                + span {
+                    font-size: 12px;
+                    @media (max-width: 768px) {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        input,
+        textarea {
+            height: 44px;
+
+            @media (max-width: 768px) {
+                height: 32px;
+            }
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                span {
+                    font-size: 13px;
+
+                    @media (max-width: 768px) {
+                        font-size: 10px;
+                    }
+                }
+
+                border-color: $white;
+            }
+        }
+
+        span {
+            transition: all 0.3s ease 0s;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            color: $white;
+            font-family: DINPro;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: -0.02em;
+            display: block;
+
+            @media (max-width: 768px) {
+                font-size: 14px;
+            }
+        }
+
+        &._error {
+            border-color: red;
+
+            span,
+            input,
+            textarea {
+                color: red;
+
+                &::placeholder {
+                    color: red;
+                }
+            }
+        }
+    }
+
+    p {
+        color: rgba($color: $white, $alpha: 0.2) !important;
+        font-family: DINPro;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: -0.02em;
+        @include adaptive-value("margin-bottom", 49, 36, 1);
+
+        a {
+            color: rgba($color: $white, $alpha: 0.5);
+        }
+    }
+
+    ._btn {
+        width: 228px;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    // .form__button
+
+    &__button {
+        @include adaptive-value("margin-top", 51, 33, 1);
+
+        position: relative;
+        z-index: 1;
+        width: 100%;
+
+        button,
+        input {
+            width: 100%;
+            margin-bottom: 19px;
+            cursor: pointer;
+        }
+
+        p {
+            color: #aeaeae;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: -0.03em;
+        }
+
+        a {
+            color: $black;
+        }
+    }
+
+    // .form__img
+
+    &__img {
+        max-width: 841px;
+    }
+}

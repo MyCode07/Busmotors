@@ -9,7 +9,7 @@
     transition: background-color 0.3s ease 0s;
     border-bottom: 1px solid rgba($color: $white, $alpha: 0.2);
 
-    &._scrolled {
+    &._sticky {
         background: linear-gradient(180deg, #1a1c23 0%, rgba(21, 23, 38, 0) 111.57%), #212226;
         background-color: #212226;
     }

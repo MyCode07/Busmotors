@@ -93,5 +93,12 @@
         border-radius: 10px;
         border-color: rgba(46, 46, 46, 0.5);
         color: $black;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $black;
+                color: $white;
+            }
+        }
     }
 }
