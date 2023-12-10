@@ -1,0 +1,83 @@
+@@include('./html/head.html', {
+"title":"проекты",
+})
+
+@@include('./html/header.html')
+
+<main>
+
+    <section class="section common-hero">
+        <div class="section__bgi">
+            <img src="img/carsection-bgi.png" alt="">
+        </div>
+        <div class="section__container _container">
+            <div class="section__body">
+                <h1>проекты</h1>
+            </div>
+            <a href="" class="back">
+                <div>
+                    <svg viewBox="0 0 16 15">
+                        <use xlink:href="@img/svg/icons.svg#back"></use>
+                    </svg>
+                </div>
+                <span>Вернуться к списку</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="section projects">
+        <div class="section__container _container">
+            <div class="section__body">
+                <div class="projects__row">
+                    <div class="projects__card">
+                        <a href="" class="projects__card-img">
+                            <img src="img/projects-page/project-1.png" alt="">
+                        </a>
+                        <div>
+                            <h3>Mercedes-Benz Sprinter Van</h3>
+                            <a href="" class="_btn">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="projects__card">
+                        <a href="" class="projects__card-img">
+                            <img src="img/projects-page/project-2.png" alt="">
+                        </a>
+                        <div>
+                            <h3>Mercedes-Benz Sprinter Van</h3>
+                            <a href="" class="_btn">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="projects__card">
+                        <a href="" class="projects__card-img">
+                            <img src="img/projects-page/project-3.png" alt="">
+                        </a>
+                        <div>
+                            <h3>Mercedes-Benz Sprinter Van</h3>
+                            <a href="" class="_btn">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="projects__card">
+                        <a href="" class="projects__card-img">
+                            <img src="img/projects-page/project-4.png" alt="">
+                        </a>
+                        <div>
+                            <h3>Mercedes-Benz Sprinter Van</h3>
+                            <a href="" class="_btn">Подробнее</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @@include('./html/parts/advantages.html')
+
+    @@include('./html/parts/ticker.html')
+
+    @@include('./html/parts/contacts.html')
+
+</main>
+
+@@include('./html/footer.html')
+@@include('./html/scripts.html')

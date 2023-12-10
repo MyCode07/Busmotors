@@ -25,10 +25,11 @@
                     </div>
                 </div>
             </div>
+            <svg class="hero__arrow" viewBox="0 0 33 18">
+                <use xlink:href=" @img/svg/icons.svg#down-arrow"></use>
+            </svg>
         </div>
-        <svg class="hero__arrow" viewBox="0 0 33 18">
-            <use xlink:href=" @img/svg/icons.svg#down-arrow"></use>
-        </svg>
+
     </section>
 
     <section class="section projects" data-replace-width="768" data-animate data-animate-bottom>
@@ -208,214 +209,13 @@
         </div>
     </section>
 
-    <section class="section cars" data-replace-width="768">
-        <div class="section__container _container">
-            <div class="section__body" data-replace-new-position="afterend">
-                <div class="section__top" data-replace-old-position="beforeend" data-animate data-animate-bottom>
-                    <h2>Mercedes Benz Sprinter в наличии <span>12</span></h2>
-                    <a href="" class="_btn" data-replace-element>все авто</a>
-                </div>
-                <div class="section__bottom">
-                    <div class="grid grid-4">
-                        <div class="grid-item" data-animate data-animate-bottom>
-                            <div class="car__card">
-                                <a href="" class="car__card-img">
-                                    <img src="img/cars/car-1.png" alt="">
-                                </a>
-                                <div>
-                                    <h3 class="car__card-name">Mercedes-Benz Sprinter Van</h3>
-                                    <p class="car__card-price">7 200 000 ₽</p>
-                                    <a href="" class="_btn">подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-item" data-animate data-animate-bottom data-animate-stagger="0.1">
-                            <div class="car__card">
-                                <a href="" class="car__card-img">
-                                    <img src="img/cars/car-2.png" alt="">
-                                </a>
-                                <div>
-                                    <h3 class="car__card-name">Mercedes-Benz Sprinter Van</h3>
-                                    <p class="car__card-price">12 200 000 ₽</p>
-                                    <a href="" class="_btn">подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-item" data-animate data-animate-bottom data-animate-stagger="0.2">
-                            <div class="car__card">
-                                <a href="" class="car__card-img">
-                                    <img src="img/cars/car-3.png" alt="">
-                                </a>
-                                <div>
-                                    <h3 class="car__card-name">Mercedes-Benz Sprinter Van</h3>
-                                    <p class="car__card-price">7 200 000 ₽</p>
-                                    <a href="" class="_btn">подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="grid-item" data-animate data-animate-bottom data-animate-stagger="0.3">
-                            <div class="car__card">
-                                <a href="" class="car__card-img">
-                                    <img src="img/cars/car-4.png" alt="">
-                                </a>
-                                <div>
-                                    <h3 class="car__card-name">Mercedes-Benz Sprinter Van </h3>
-                                    <p class="car__card-price">9 200 000 ₽</p>
-                                    <a href="" class="_btn">подробнее</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @@include('./html/parts/cars.html')
 
-    <section class="section gallery" data-replace-width="768">
-        <div class="section__container _container">
-            <div class="section__body" data-replace-new-position="afterend">
-                <div class="section__top" data-replace-old-position="beforeend" data-animate data-animate-bottom>
-                    <h2>Фотогалерея</h2>
-                    <a href="" class="_btn" data-replace-element>все фото</a>
-                </div>
-                <div class="section__bottom">
-                    <div class="grid grid-4">
-                        <div class="grid-item" data-animate data-animate-bottom>
-                            <a href="img/gallery/gallery-1.png" class="gallery__img" data-fancybox>
-                                <img src="img/gallery/gallery-1.png" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-item" data-animate data-animate-bottom>
-                            <a href="img/gallery/gallery-2.png" class="gallery__img" data-fancybox>
-                                <img src="img/gallery/gallery-2.png" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-item" data-animate data-animate-bottom>
-                            <a href="img/gallery/gallery-3.png" class="gallery__img" data-fancybox>
-                                <img src="img/gallery/gallery-3.png" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-item" data-animate data-animate-bottom>
-                            <a href="img/gallery/gallery-4.png" class="gallery__img" data-fancybox>
-                                <img src="img/gallery/gallery-4.png" alt="">
-                            </a>
-                        </div>
-                        <div class="grid-item" data-animate data-animate-bottom>
-                            <a href="img/gallery/gallery-5.png" class="gallery__img" data-fancybox>
-                                <img src="img/gallery/gallery-5.png" alt="">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @@include('./html/parts/gallery.html')
 
-    <section class="section approach" data-replace-width="992">
-        <div class="section__container _container">
-            <div class="section__body">
-                <div class="section__flex">
-                    <div class="section__flex-left" data-animate data-animate-left>
-                        <h2>Мы стремимся обеспечить индивидуальный подход
-                            к каждому проекту</h2>
-                        <div data-replace-new-position="beforeend">
-                            <img src="img/approach-1.png" alt="">
-                        </div>
-                    </div>
-                    <div class="section__flex-right " data-animate data-animate-right>
-                        <div class="approach-rightimg" data-replace-old-position="beforeend">
-                            <img src="img/approach-2.png" alt="" data-replace-element>
-                        </div>
-                        <p>Мы дарим новую жизнь и новые возможности</p>
-                        <ol>
-                            <li>
-                                <svg class="fill" viewBox="0 0 61 62">
-                                    <use xlink:href="@img/svg/icons.svg#approach-1"></use>
-                                </svg>
-                                <div>
-                                    <span>Международный стандарт</span>
-                                    <p>Качество работ и продукция соответствует международным сертификатам ISO
-                                        9001:2015</p>
-                                </div>
-                            </li>
-                            <li>
-                                <svg viewBox="0 0 61 62">
-                                    <use xlink:href="@img/svg/icons.svg#approach-2"></use>
-                                </svg>
-                                <div>
-                                    <span>Официальный партнер</span>
-                                    <p>Официальный партнер Mercedes-Benz
-                                        по переоборудованию автомобилей</p>
-                                </div>
-                            </li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @@include('./html/parts/approach.html')
 
-    <section class="section video" data-animate data-animate-opacity>
-        <div class="section__container _container">
-            <div class="section__body">
-                <div class="video-container">
-                    <button class="play">
-                        <svg viewBox="0 0 142 142">
-                            <use xlink:href="@img/svg/icons.svg#video"></use>
-                        </svg>
-                    </button>
-
-                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20231020170918/Thumbnail-(1).jpg"
-                        id="video-thumbnail">
-                    <video id="video">
-
-                        <!-- Video source -->
-                        <source
-                            src="https://media.geeksforgeeks.org/wp-content/uploads/20231020155223/Full-Stack-Development-_-LIVE-Classes-_-GeeksforGeeks.mp4"
-                            type="video/mp4">
-                    </video>
-
-                    <!-- Controlers continer -->
-                    <div class="controls">
-
-                        <!-- Left controller div -->
-                        <div class="left">
-                            <button id="skipminus-10">
-                                <i class="fa-solid fa-backward"></i>
-                            </button>
-                            <button id="play-pause">
-                                <i class="fa-solid fa-play"></i>
-                            </button>
-                            <button id="skip-10">
-                                <i class="fa-solid fa-forward"></i>
-                            </button>
-                        </div>
-
-                        <!-- div for progress bar -->
-                        <div class="video-timer">
-                            <span id="current-time">00:00</span>
-                            <span id="separator">/</span>
-                            <span id="max-duration">00:00</span>
-                        </div>
-                        <div class="playback-line">
-                            <div class="progress-bar"></div>
-
-                        </div>
-
-                        <!-- Right controller div -->
-                        <div class="right">
-                            <div class="volume-container">
-                                <div id="mute">
-                                    <i class="fas fa-volume-up"></i>
-                                </div>
-                                <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @@include('./html/parts/video.html')
 
     @@include('./html/parts/contacts.html')
 

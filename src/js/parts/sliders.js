@@ -49,36 +49,85 @@ Fancybox.bind("[data-fancybox]", {
 });
 
 
+if (document.querySelector('.gallery-slide')) {
+    var swiper123 = new Swiper(".mySwiper", {
+        modules: [
+            Navigation, Pagination, Scrollbar, Thumbs, FreeMode
+        ],
+        slidesPerView: 'auto',
+        freeMode: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+            320: {
+                spaceBetween: 4,
 
-var swiper = new Swiper(".mySwiper", {
-    modules: [
-        Navigation, Pagination, Scrollbar, Thumbs
-    ],
-    slidesPerView: 'auto',
-    freeMode: true,
-    watchSlidesProgress: true,
+            },
+            768: {
+                spaceBetween: 17,
 
-
-    breakpoints: {
-        320: {
-            spaceBetween: 4
-        },
-        768: {
-            spaceBetween: 17
+            }
         }
-    }
-});
+    });
 
-var swiper2 = new Swiper(".mySwiper2", {
-    modules: [
-        Navigation, Pagination, Scrollbar, Thumbs
-    ],
-    spaceBetween: 10,
-    navigation: {
-        nextEl: ".next",
-        prevEl: ".prev",
-    },
-    thumbs: {
-        swiper: swiper,
-    },
-});
+    new Swiper(".mySwiper2", {
+        modules: [
+            Navigation, Pagination, Scrollbar, Thumbs
+        ],
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".next",
+            prevEl: ".prev",
+        },
+        thumbs: {
+            swiper: swiper123,
+        },
+    });
+}
+
+if (document.querySelector('.single')) {
+    var swiper123 = new Swiper(".mySwiper", {
+
+        modules: [
+            FreeMode
+        ],
+        direction: 'vertival',
+        slidesPerView: 'auto',
+        freeMode: true,
+        watchSlidesProgress: true,
+        spaceBetween: 12,
+
+        breakpoints: { 
+            320: {
+                spaceBetween: 7,
+                direction: 'horizontal',
+            },
+            768: {
+                spaceBetween: 12,
+            },
+            993: {
+                direction: 'vertival',
+            }
+        }
+    });
+
+    new Swiper(".mySwiper2", {
+        modules: [
+            Navigation, Pagination, Scrollbar, Thumbs
+        ],
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".next",
+            prevEl: ".prev",
+        },
+
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            type: "fraction",
+        },
+
+        thumbs: {
+            swiper: swiper123,
+        },
+    });
+}

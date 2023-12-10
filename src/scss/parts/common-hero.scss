@@ -1,6 +1,5 @@
 .common-hero {
     position: relative;
-    @include adaptive-value("height", 403, 288, 1);
     @include adaptive-value("padding-top", 204, 105, 1);
 
     &:after {
@@ -53,17 +52,22 @@
             position: relative;
             z-index: 2;
             height: 100%;
+            @include adaptive-value("padding-bottom", 138, 70, 1);
         }
     }
 
     .back {
         position: absolute;
         bottom: 14px;
-        left: 14px;
+        left: 77px;
         display: flex;
         align-items: center;
         gap: 20px;
         z-index: 2;
+
+        @media (max-width: 992px) {
+            left: 16px;
+        }
 
         div {
             border-radius: 50%;
@@ -105,4 +109,137 @@
             }
         }
     }
+
+    .catalog__filters {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        @include adaptive-value("margin-top", 52, 39, 1);
+
+        // .catalog__filters-item
+
+        &-item {
+            position: relative;
+
+            button {
+                border-radius: 10px;
+                border: 1px solid rgba($color: $white, $alpha: 0.5);
+
+                height: fit-content;
+                padding: 18px 27px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+
+                @media (max-width: 768px) {
+                    padding: 20px 18px;
+                }
+
+                span {
+                    white-space: nowrap;
+                    color: $white;
+                    text-align: center;
+                    font-family: DIN;
+                    font-size: 20px;
+                    font-weight: 700;
+                    line-height: 1.1;
+                    text-transform: uppercase;
+
+                    @media (max-width: 768px) {
+                        font-size: 16px;
+                    }
+                }
+
+                svg {
+                    width: fit-content;
+                    transition: all 0.3s ease 0s;
+                    flex: 0 0 auto;
+                }
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.4);
+                        svg {
+                            transform: rotate(-180deg);
+                        }
+                    }
+                }
+            }
+
+            ul {
+                position: absolute;
+                top: calc(100% + 8px);
+                left: 0;
+                z-index: 2;
+                transform: translate3d(0, 10px, 0);
+                background-color: $white;
+                border-radius: 10px;
+                overflow: hidden;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s ease 0s;
+                padding: 17px 0;
+                width: 223px;
+
+                @media (max-width: 425px) {
+                    width: 100%;
+                }
+
+                li {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    @include adaptive-value("padding-left", 18, 10, 1);
+                    @include adaptive-value("padding-right", 18, 10, 1);
+                    @include adaptive-value("font-size", 20, 16, 1);
+                    color: #050505;
+                    font-family: DIN;
+                    font-weight: 700;
+                    line-height: 1.1;
+                    text-transform: uppercase;
+                    cursor: pointer;
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            background-color: #212226;
+                            color: $white;
+                        }
+                    }
+
+                    &._selected {
+                        background-color: #212226;
+                        color: $white;
+                    }
+                }
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    ul {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translate3d(0, 0, 0);
+                    }
+
+                    button img {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+
+            &._active {
+                ul {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translate3d(0, 0, 0);
+                }
+
+                button img {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+
 }
