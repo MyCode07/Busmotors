@@ -13,6 +13,7 @@ import "./parts/cursor.js";
 import "./parts/video.js";
 import "./parts/filter.js";
 import "./parts/read-more.js";
+import "./parts/popup.js";
 import { parallax } from "./parts/parallax.js";
 // import "./parts/animations.js";
 

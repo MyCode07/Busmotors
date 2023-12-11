@@ -341,10 +341,6 @@
                                 opacity: 1;
                                 pointer-events: all;
                                 visibility: visible;
-
-                                @media (min-width: 1025px) {
-                                    padding: 6px 4px;
-                                }
                             }
 
                             & > button > svg {
@@ -361,10 +357,6 @@
                                     opacity: 1;
                                     pointer-events: all;
                                     visibility: visible;
-
-                                    @media (min-width: 1025px) {
-                                        padding: 6px 4px;
-                                    }
                                 }
 
                                 button > svg {

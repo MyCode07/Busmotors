@@ -730,32 +730,25 @@
     }
 
     .form {
+        max-width: 410px;
+        width: 100%;
+
         background-color: $white;
-        padding: 32px 35px 41px 35px;
+        padding: 30px 35px 40px 35px;
         border-radius: 10px;
         height: fit-content;
         max-width: 410px;
         width: 100%;
 
-        margin-top: 10px;
-
         @media (max-width: 992px) {
-            padding: 32px 28px 36px 28px;
+            padding: 30px 28px;
             margin-top: 0px;
             max-width: none;
         }
 
         h5 {
-            color: $black;
-            text-align: center;
-            font-family: DIN;
-            font-size: 32px;
-
-            font-style: normal;
-            font-weight: 700;
-            line-height: 90%;
-            text-transform: uppercase;
             margin-bottom: 58px;
+            color: $black;
 
             @media (max-width: 992px) {
                 font-size: 28px;
@@ -763,79 +756,58 @@
             }
         }
 
+        // .form__row
+
+        &__row {
+            flex-direction: column;
+        }
+
         // .form__item
 
         &__item {
             border-bottom: 1px solid rgba($color: #5b5555, $alpha: 0.5);
 
-            @media (any-hover: hover) {
-                &:hover {
-                    border-color: $white;
-                }
+            input {
+                color: $black;
+                padding-bottom: 8px;
             }
 
             span {
                 color: #5b5555;
-                font-size: 18px;
-
-                @media (max-width: 768px) {
-                    font-size: 15px;
-                }
             }
-
-            &._error {
-                border-color: red;
-
-                span,
-                input,
-                textarea {
-                    color: red;
-
-                    &::placeholder {
-                        color: red;
-                    }
-                }
-            }
-        }
-
-        // .form__row
-
-        &__row {
-            flex-direction: column;
-            gap: 40px;
-
-            @media (max-width: 768px) {
-                gap: 32px;
-            }
-        }
-
-        p {
-            color: #969393 !important;
-            text-align: center;
-            a {
-                color: #292828;
-            }
-        }
-
-        ._btn {
-            background-color: $black;
-            width: 100%;
-            margin-bottom: 0;
         }
 
         // .form__button
 
         &__button {
-            button,
-            input {
+            @media (max-width: 768px) {
+                margin-top: 20px;
             }
-
+            
             p {
-                color: #aeaeae;
-            }
+                text-align: center;
+                color: #969393 !important;
 
-            a {
-                color: $black;
+                @media (max-width: 768px) {
+                    margin-bottom: 28px;
+                }
+
+                a {
+                    color: #292828;
+                }
+            }
+        }
+    }
+    ._btn {
+        width: 100%;
+        background-color: $black;
+        margin-bottom: 0;
+        transition: all 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: $white;
+                background-color: rgba(000, 000, 000, 0.8);
             }
         }
     }
