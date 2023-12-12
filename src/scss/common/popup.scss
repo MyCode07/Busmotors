@@ -222,7 +222,8 @@
         &__name {
             color: #0c0b0b;
             @include adaptive-value("font-size", 24, 18, 1);
-            font-weight: 700;
+            font-family: DINCondensedC;
+
             line-height: 1.1;
             text-transform: uppercase;
             flex: 1 1 auto;
@@ -238,9 +239,10 @@
             color: #090909;
             text-align: right;
             @include adaptive-value("font-size", 26, 20, 1);
-            font-weight: 700;
+            font-family: DINCondensedC;
+
             line-height: 1.1;
-            
+
             @media (max-width: 768px) {
                 text-align: center;
             }

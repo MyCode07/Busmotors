@@ -43,8 +43,8 @@
         p {
             width: 100%;
             color: $white;
-            font-family: DIN;
-            font-weight: 700;
+            font-family: DINCondensedC;
+
             line-height: 1.1;
             text-transform: uppercase;
             display: block;
@@ -126,9 +126,10 @@
                     li {
                         a {
                             color: $white;
-                            font-family: DIN;
+
                             font-size: 24px;
-                            font-weight: 700;
+                            font-family: DINCondensedC;
+
                             line-height: 1.1;
                             text-transform: uppercase;
                             @media (max-width: 768px) {

@@ -91,7 +91,8 @@
             display: block;
             color: $white;
             @include adaptive-value("font-size", 50, 36, 1);
-            font-weight: 700;
+            font-family: DINCondensedC;
+
             line-height: 1.1;
             text-transform: uppercase;
             margin-top: 64px;

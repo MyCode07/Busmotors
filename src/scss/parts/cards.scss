@@ -74,7 +74,8 @@
     &-name {
         color: $black;
         @include adaptive-value("font-size", 22, 18, 1);
-        font-weight: 700;
+        font-family: DINCondensedC;
+
         line-height: 1.1;
         text-transform: uppercase;
     }
@@ -87,8 +88,8 @@
 
         color: #2b2727;
         @include adaptive-value("font-size", 30, 24, 1);
+        font-family: DINCondensedC;
 
-        font-weight: 700;
         line-height: 1.1;
         text-transform: uppercase;
 
@@ -135,7 +136,8 @@
     h3 {
         color: $white;
         @include adaptive-value("font-size", 40, 24, 1);
-        font-weight: 700;
+        font-family: DINCondensedC;
+
         text-transform: uppercase;
         display: block;
 

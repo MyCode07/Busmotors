@@ -55,7 +55,8 @@
 
                 a {
                     font-size: 24px;
-                    font-weight: 700;
+                    font-family: DINCondensedC;
+
                     letter-spacing: -0.02em;
                     text-transform: uppercase;
                     display: block;
@@ -115,7 +116,8 @@
                             width: 100%;
                             white-space: wrap;
                             font-size: 20px;
-                            font-weight: 700;
+                            font-family: DINCondensedC;
+
                             line-height: 1.1;
                         }
                     }
@@ -140,9 +142,10 @@
 
     label {
         color: rgba($color: $white, $alpha: 0.5);
-        font-family: DINPro;
+
         font-size: 12px;
-        font-weight: 700;
+        font-family: DINCondensedC;
+
         letter-spacing: -0.05em;
         text-transform: uppercase;
         display: block;
@@ -159,7 +162,8 @@
         a {
             color: $white;
             font-size: 30px;
-            font-weight: 700;
+            font-family: DINCondensedC;
+
             line-height: 1.1;
         }
     }
