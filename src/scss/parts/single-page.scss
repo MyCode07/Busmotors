@@ -90,7 +90,6 @@
         span {
             display: block;
             color: $white;
-            font-family: DIN;
             @include adaptive-value("font-size", 50, 36, 1);
             font-weight: 700;
             line-height: 1.1;

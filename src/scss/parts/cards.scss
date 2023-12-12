@@ -73,7 +73,6 @@
 
     &-name {
         color: $black;
-        font-family: DIN;
         @include adaptive-value("font-size", 22, 18, 1);
         font-weight: 700;
         line-height: 1.1;
@@ -135,7 +134,6 @@
 
     h3 {
         color: $white;
-        font-family: DIN;
         @include adaptive-value("font-size", 40, 24, 1);
         font-weight: 700;
         text-transform: uppercase;

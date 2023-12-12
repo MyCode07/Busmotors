@@ -141,7 +141,6 @@
                     white-space: nowrap;
                     color: $white;
                     text-align: center;
-                    font-family: DIN;
                     font-size: 20px;
                     font-weight: 700;
                     line-height: 1.1;
@@ -194,7 +193,6 @@
                     @include adaptive-value("padding-right", 18, 10, 1);
                     @include adaptive-value("font-size", 20, 16, 1);
                     color: #050505;
-                    font-family: DIN;
                     font-weight: 700;
                     line-height: 1.1;
                     text-transform: uppercase;

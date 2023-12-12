@@ -54,7 +54,6 @@
                 transition: all 0.3s ease 0s;
 
                 a {
-                    font-family: DINPro;
                     font-size: 24px;
                     font-weight: 700;
                     letter-spacing: -0.02em;
@@ -115,7 +114,6 @@
                         a {
                             width: 100%;
                             white-space: wrap;
-                            font-family: "DIN";
                             font-size: 20px;
                             font-weight: 700;
                             line-height: 1.1;
@@ -160,7 +158,6 @@
 
         a {
             color: $white;
-            font-family: DIN;
             font-size: 30px;
             font-weight: 700;
             line-height: 1.1;
@@ -203,7 +200,6 @@
         // ._ticker-text
 
         &-text {
-           
             svg {
                 width: 136px;
                 height: 20px;

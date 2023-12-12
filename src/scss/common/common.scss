@@ -4,7 +4,7 @@ html {
 
 body {
     scroll-behavior: smooth;
-    font-family: "DIN";
+    font-family: "DINCondensedC", "Halvetica", "sans-serif";
     font-style: normal;
     color: $white;
     background-color: #212226;
@@ -58,7 +58,6 @@ h3,
 h4,
 h5,
 h6 {
-    // font-family: DIN Condensed;
     color: $white;
     font-style: normal;
     text-transform: uppercase;

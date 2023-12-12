@@ -107,10 +107,6 @@
 }
 
 .advantages {
-    * {
-        font-family: DINPro;
-    }
-
     .section {
         // .section__flex
 
@@ -132,10 +128,8 @@
                     display: flex;
                     flex-direction: column;
 
-                    font-family: DIN;
                     @include adaptive-value("font-size", 120, 60, 1);
 
-                    font-weight: 700;
                     line-height: 90%;
                     text-transform: uppercase;
                     color: $white;
@@ -152,9 +146,7 @@
 
                 div {
                     color: $white;
-                    font-family: DIN;
                     @include adaptive-value("font-size", 24, 16, 1);
-                    font-weight: 700;
                     line-height: 1.1;
                     text-transform: uppercase;
                 }
@@ -212,9 +204,7 @@
 
                         p {
                             color: $white;
-                            font-family: DIN;
                             @include adaptive-value("font-size", 22, 16, 1);
-                            font-weight: 700;
                             line-height: 1.1;
                             text-transform: uppercase;
                         }
@@ -384,7 +374,6 @@
                     margin-bottom: 3px;
                     display: block;
                     color: rgba($color: $white, $alpha: 0.6);
-                    font-family: DIN;
                     @include adaptive-value("font-size", 16, 13, 1);
                     font-style: normal;
                     font-weight: 700;
@@ -438,7 +427,6 @@
             justify-content: center;
 
             color: #212226;
-            font-family: DIN;
             font-size: 24px;
             font-weight: 700;
             line-height: 1.1;
@@ -783,7 +771,7 @@
             @media (max-width: 768px) {
                 margin-top: 20px;
             }
-            
+
             p {
                 text-align: center;
                 color: #969393 !important;

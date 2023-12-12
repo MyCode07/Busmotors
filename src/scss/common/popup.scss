@@ -221,7 +221,6 @@
 
         &__name {
             color: #0c0b0b;
-            font-family: DIN Condensed;
             @include adaptive-value("font-size", 24, 18, 1);
             font-weight: 700;
             line-height: 1.1;
@@ -238,7 +237,6 @@
         &__price {
             color: #090909;
             text-align: right;
-            font-family: DIN Condensed;
             @include adaptive-value("font-size", 26, 20, 1);
             font-weight: 700;
             line-height: 1.1;

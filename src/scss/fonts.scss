@@ -1,7 +1,7 @@
 @font-face {
-	font-family: DIN;
+	font-family: DINCondensedC;
 	font-display: swap;
-	src: url("../fonts/DIN-Condensed-Bold.woff2") format("woff2"), url("../fonts/DIN-Condensed-Bold.woff") format("woff");
+	src: url("../fonts/DINCondensedC.woff2") format("woff2"), url("../fonts/DINCondensedC.woff") format("woff");
 	font-weight: 400;
 	font-style: normal;
 }
@@ -15,14 +15,14 @@
 @font-face {
 	font-family: DINPro;
 	font-display: swap;
-	src: url("../fonts/DINPro-Medium.woff2") format("woff2"), url("../fonts/DINPro-Medium.woff") format("woff");
-	font-weight: 500;
+	src: url("../fonts/DINPro-Regular.woff2") format("woff2"), url("../fonts/DINPro-Regular.woff") format("woff");
+	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
 	font-family: DINPro;
 	font-display: swap;
-	src: url("../fonts/DINPro-Regular.woff2") format("woff2"), url("../fonts/DINPro-Regular.woff") format("woff");
-	font-weight: 400;
+	src: url("../fonts/DINPro-Medium.woff2") format("woff2"), url("../fonts/DINPro-Medium.woff") format("woff");
+	font-weight: 500;
 	font-style: normal;
 }
