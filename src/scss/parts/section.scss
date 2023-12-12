@@ -691,31 +691,6 @@
 .text {
     @include adaptive-value("margin-bottom", 110, 90, 1);
 
-    h2 {
-        @include adaptive-value("margin-bottom", 40, 24, 1);
-    }
-
-    ol {
-        height: fit-content;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        @include adaptive-value("gap", 30, 10, 1);
-
-        li {
-            color: $white;
-            font-family: DINPro;
-            font-size: 18px;
-            font-weight: 400;
-            letter-spacing: -0.05em;
-            line-height: normal;
-
-            @media (max-width: 768px) {
-                font-size: 15px;
-            }
-        }
-    }
-
     .section__flex {
         justify-content: space-between;
         gap: 20px;
@@ -803,59 +778,48 @@
             }
         }
     }
-    ._btn {
-        width: 100%;
-        background-color: $black;
-        margin-bottom: 0;
-        transition: all 0.3s ease 0s;
+}
 
-        @media (any-hover: hover) {
-            &:hover {
-                color: $white;
-                background-color: rgba(000, 000, 000, 0.8);
+.read-more {
+    // .read-more__content
+
+    &__content {
+        position: relative;
+        max-width: 861px;
+
+        &:before {
+            position: absolute;
+            content: "";
+            bottom: -50px;
+            left: 50%;
+            width: 110%;
+            transform: translate(-50%, 0);
+            height: 110px;
+            background: #212226;
+            filter: blur(20px);
+
+            transition: all 0.5s ease 0s;
+            pointer-events: none;
+
+            @media (max-width: 768px) {
+                width: 150%;
+            }
+        }
+
+        &._active {
+            &:before {
+                opacity: 0;
             }
         }
     }
 
-    &.read-more {
-        ol {
-            overflow: hidden;
-            position: relative;
-            height: 170px;
-            transition: all 0.3s ease 0s;
-            position: relative;
-            max-width: 861px;
-            width: 100%;
-            transition: all 0.3s linear 0s;
+    .text-content {
+        height: 320px;
+        overflow: hidden;
+    }
 
-            &._active {
-                height: auto;
-            }
-
-            &:before {
-                position: absolute;
-                content: "";
-                left: -40px;
-                bottom: -40px;
-                width: 110%;
-                height: 100px;
-                background-color: #212226;
-                filter: blur(37px);
-                transition: all 0.5s ease 0s;
-                pointer-events: none;
-            }
-        }
-
-        ._btn {
-            margin-top: 43px;
-        }
-
-        &.services-page__read {
-            ol {
-                height: 320px;
-                max-width: 750px;
-            }
-        }
+    ._btn {
+        margin-top: 43px;
     }
 }
 
@@ -963,5 +927,75 @@
         flex-direction: column;
         align-items: center;
         @include adaptive-value("gap", 110, 82, 1);
+    }
+}
+
+.text-content,
+.text-page__content {
+    & > :not(:last-child) {
+        margin-bottom: 15px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    h2:first-child {
+        margin-bottom: 40px;
+
+        @media (max-width: 768px) {
+            margin-bottom: 24px;
+        }
+    }
+
+    ol,
+    ul,
+    p {
+        & + h2,
+        & + h3,
+        & + h4,
+        & + h5,
+        & + h3 {
+            @include adaptive-value("margin-top", 45, 25, 1);
+        }
+    }
+
+    p,
+    ol,
+    ul,
+    strong,
+    b,
+    em,
+    i {
+        font-family: DinPro;
+        font-size: 18px;
+        line-height: normal;
+
+        @media (max-width: 768px) {
+            font-size: 15px;
+        }
+    }
+
+    ul {
+        padding-left: 1.5em;
+        list-style: unset;
+
+        li {
+            list-style: unset;
+            list-style-type: unset;
+        }
+    }
+
+    ol {
+        padding-left: 1.5em;
+
+        li {
+            list-style: unset;
+            list-style-type: unset;
+        }
     }
 }

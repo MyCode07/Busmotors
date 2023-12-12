@@ -31,6 +31,10 @@ body {
 
 main {
     flex: 1 1 auto;
+
+    & > :last-child{
+        margin-bottom: 0 !important;
+    }
 }
 
 ._container {

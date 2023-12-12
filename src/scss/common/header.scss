@@ -67,7 +67,7 @@
 
     &__logo {
         @media (min-width: 1025px) {
-            @include adaptive-value("margin-right", 130, -155, 1);
+            margin-right: 30px;
         }
 
         svg,

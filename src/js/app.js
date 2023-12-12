@@ -1,5 +1,5 @@
 import { replaceDomElements } from "./static/replace.js";
-// import { maskInputs } from "./static/inputmask.js";
+import { maskInputs } from "./static/inputmask.js";
 import { animateAction } from "./parts/animations.js";
 // import { accordeon } from "./static/accordeon.js";
 import { stickyHeader } from "./parts/header.js";
@@ -20,7 +20,7 @@ import { parallax } from "./parts/parallax.js";
 parallax();
 // accordeon();
 animateAction()
-// maskInputs('+7 (999) 999-99-99', '._mask-phone')
+maskInputs('+7 (999) 999-99-99', '._mask-phone')
 replaceDomElements();
 stickyHeader();
 
@@ -29,6 +29,17 @@ stickyHeader();
 Fancybox.bind("[data-fancybox]", {
 });
 
+const inputItems = [...document.querySelectorAll('input ')].concat([...document.querySelectorAll('textarea ')])
+if (inputItems.length) {
+    inputItems.forEach(input => {
+        if (input.closest('.form__item')) {
+            input.addEventListener('input', () => {
+                if (input.value != '') input.classList.add('_active')
+                else input.classList.remove('_active')
+            })
+        }
+    })
+}
 
 
 

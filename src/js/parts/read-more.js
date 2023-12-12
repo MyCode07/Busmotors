@@ -7,35 +7,26 @@ document.addEventListener('click', function (e) {
     if (targetEl.classList.contains('_read-more')) {
         const showText = targetEl.dataset.showText;
 
-        const textContnet = targetEl.closest('.section__flex').querySelector('ol')
+        const text = targetEl.closest('section').querySelector('.text-content')
+        const textContnet = targetEl.closest('section').querySelector('.read-more__content')
         if (textContnet) {
             textContnet.classList.toggle('_active');
 
             if (textContnet.classList.contains('_active')) {
                 targetEl.textContent = 'Скрыть';
 
-                gsap.to(textContnet, {
+                gsap.to(text, {
                     height: 'auto',
                     duration: 0.3
                 })
-
             }
-
             else {
-                if (servicesPageRead) {
-                    targetEl.textContent = showText;
-                    gsap.to(textContnet, {
-                        height: 328,
-                        duration: 0.3
-                    })
-                }
-                else {
-                    targetEl.textContent = showText;
-                    gsap.to(textContnet, {
-                        height: 170,
-                        duration: 0.3
-                    })
-                }
+                targetEl.textContent = showText;
+
+                gsap.to(text, {
+                    height: 320,
+                    duration: 0.3
+                })
             }
         }
     }
