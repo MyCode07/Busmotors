@@ -31,6 +31,10 @@
     .inner-ul {
         flex: 0 0 100%;
         width: 100%;
+        max-height: 0;
+        height: 100%;
+        transition: max-height 0.3s ease 0s;
+        overflow: hidden;
     }
 
     nav {
@@ -80,11 +84,14 @@
                 }
 
                 &[data-open] {
+                    .inner-ul {
+                        max-height: 100vh;
+                        transition: max-height 0.3s ease 0s;
+                    }
+
                     & > .inner-ul > ul {
-                        opacity: 1;
                         pointer-events: all;
-                        max-height: 100%;
-                        padding: 30px 0 30px 18px;
+                        max-height: 100vh;
                     }
 
                     & > button svg {
@@ -94,13 +101,14 @@
 
                 ul {
                     display: block;
-                    opacity: 0;
                     pointer-events: none;
                     transition: all 0.3s ease 0s;
                     position: static;
                     width: 100%;
                     max-height: 0;
                     height: auto;
+                    padding: 30px 0 30px 18px;
+                    overflow: hidden;
 
                     & > :not(:last-child) {
                         margin-bottom: 26px;

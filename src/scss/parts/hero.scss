@@ -64,16 +64,16 @@
         display: flex;
         gap: 15px;
 
-        ._btn {
-            height: 72px;
-            width: 269px;
-        }
-
         @media (max-width: 768px) {
             flex-direction: column;
             width: 100%;
+            gap: 11px;
+        }
 
-            button {
+        ._btn {
+            height: 72px;
+            width: 269px;
+            @media (max-width: 768px) {
                 width: 100%;
             }
         }

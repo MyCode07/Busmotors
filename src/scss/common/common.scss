@@ -32,7 +32,7 @@ body {
 main {
     flex: 1 1 auto;
 
-    & > :last-child{
+    & > :last-child {
         margin-bottom: 0 !important;
     }
 }
@@ -215,5 +215,9 @@ h4 {
             height: 411px;
             flex: 0 0 auto;
         }
+    }
+
+    @media (max-width: 992px) {
+        display: none;
     }
 }

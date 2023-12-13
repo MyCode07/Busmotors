@@ -86,6 +86,8 @@
     .projects-card {
         cursor: none !important;
     }
+
+ 
 }
 
 .services-page__card {
@@ -431,6 +433,11 @@
                 position: absolute;
                 right: -40px;
                 top: -7px;
+            }
+
+            @media (max-width: 768px) {
+                position: relative;
+                top: -8px;
             }
 
             flex: 0 0 auto;

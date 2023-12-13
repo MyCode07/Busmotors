@@ -185,13 +185,14 @@
 
                 @media (max-width: 425px) {
                     width: 100%;
+                    min-width: 176px;
                 }
 
                 li {
                     padding-top: 10px;
                     padding-bottom: 10px;
-                    @include adaptive-value("padding-left", 18, 10, 1);
-                    @include adaptive-value("padding-right", 18, 10, 1);
+                    @include adaptive-value("padding-left", 18, 7, 1);
+                    @include adaptive-value("padding-right", 18, 7, 1);
                     @include adaptive-value("font-size", 20, 16, 1);
                     color: #050505;
                     font-family: DINCondensedC;

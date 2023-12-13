@@ -48,6 +48,7 @@ if (videoElement) {
             videoThumbnail.style.display = "none";
             video.play();
             playpause.innerHTML = '<i class="fa-solid fa-pause"></i>';
+            myplay.style.transform = 'translate(-50%, -50%) scale(0)'
         } else {
             video.pause();
             playpause.innerHTML = '<i class="fa-solid fa-play"></i>';
