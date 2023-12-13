@@ -18,3 +18,22 @@
     &-item {
     }
 }
+
+.scroll-wrapper {
+    @media (max-width: 1024px) {
+        overflow-x: auto;
+        width: 100vw;
+        margin-left: -16px;
+        padding: 0 16px;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .grid {
+        @media (max-width: 1024px) {
+            width: fit-content;
+        }
+    }
+}

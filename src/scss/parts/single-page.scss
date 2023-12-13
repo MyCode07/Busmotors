@@ -1,4 +1,4 @@
-.single {
+.single-car {
     padding-top: 200px;
 
     h1 {
@@ -37,22 +37,27 @@
             // .section__flex-right
 
             &-right {
+                max-width: 634px;
+                flex: 1 1 auto;
+                width: 50%;
+
                 @media (max-width: 992px) {
                     width: 100%;
+                    max-width: none;
+                    flex: unset;
                 }
             }
         }
     }
 
-    .car__slider {
+    .car-slider {
         position: relative;
         display: flex;
         gap: 20px;
-        width: fit-content;
+        width: 100%;
 
         @media (max-width: 992px) {
             flex-direction: column;
-            width: 100%;
         }
     }
 
@@ -117,54 +122,73 @@
         }
     }
 
-    .mySwiper2 {
-        @media (min-width: 993px) {
-            max-width: 524px;
-            width: 100%;
-        }
+    .slider-main {
+        max-width: 524px;
+        flex: 1 1 auto;
+        width: calc(100% - 110px);
 
         @media (max-width: 992px) {
+            max-width: none;
             width: 100%;
+            max-width: none;
+            flex: unset;
+        }
+
+        .swiper {
+            @media (max-width: 992px) {
+                max-width: none;
+                width: 100vw;
+                margin-left: -16px;
+                padding: 0 16px;
+            }
+        }
+
+        .swiper-slide {
+            cursor: pointer;
+            position: relative;
+            padding-bottom: 117.37%;
+
+            @media (max-width: 992px) {
+                padding-bottom: 0;
+                height: 402px;
+            }
         }
 
         img {
             border-radius: 10px;
-
-            @media (min-width: 993px) {
-                height: 615px;
-            }
-
-            @media (max-width: 992px) {
-                height: 450px;
-            }
-
-            @media (max-width: 768px) {
-                height: 402px;
-            }
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 
-    .mySwiper {
-        @media (min-width: 993px) {
-            overflow: hidden;
-            width: fit-content;
-            max-height: 576px;
-            height: 100% !important;
-            margin-top: auto;
-            margin-bottom: auto;
-        }
+    .slider-thumbs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        @media (max-width: 992px) {
-            max-width: 93%;
-            margin-left: auto;
-            margin-right: auto;
-            overflow: hidden;
-        }
+        .swiper {
+            width: 89px;
+            height: 100%;
+            margin-top: 14px;
+            margin-bottom: 14px;
 
-        .swiper-wrapper {
             @media (min-width: 993px) {
-                width: fit-content;
-                flex-direction: column;
+                @include adaptive-value("max-height", 550, 20, 1);
+            }
+
+            @media (max-width: 992px) {
+                height: auto;
+                margin-top: 0;
+                margin-bottom: 0;
+
+                max-width: none;
+                width: 100vw;
+                margin-left: -16px;
+                padding: 0 16px;
             }
         }
 
@@ -173,28 +197,20 @@
             cursor: pointer;
             width: fit-content;
             opacity: 0.4;
+            height: 85px;
+
+            @media (max-width: 992px) {
+                height: 45px;
+            }
 
             &.swiper-slide-thumb-active {
                 opacity: 1;
             }
 
-            @media (min-width: 993px) {
-                height: fit-content;
-                margin-right: 0 !important;
-            }
-        }
-
-        img {
-            border-radius: 5px;
-
-            @media (min-width: 993px) {
-                width: 89px;
-                height: 85px;
-            }
-
-            @media (max-width: 992px) {
-                width: 47px;
-                height: 45px;
+            img {
+                border-radius: 5px;
+                height: 100%;
+                object-fit: cover;
             }
         }
     }
@@ -223,33 +239,6 @@
         }
     }
 
-    .slider-control {
-        position: absolute;
-        justify-content: space-between;
-
-        @media (min-width: 993px) {
-            flex-direction: column;
-            height: 100%;
-            width: fit-content;
-            right: 42px;
-            gap: unset;
-        }
-
-        @media (max-width: 992px) {
-            bottom: 17px;
-            width: 100%;
-        }
-
-        button {
-            @media (max-width: 425px) {
-                svg {
-                    width: 8px;
-                    height: 10px;
-                }
-            }
-        }
-    }
-
     .next {
         position: relative;
         z-index: 2;
@@ -258,6 +247,7 @@
             transform: rotate(90deg);
         }
     }
+
     .prev {
         @media (min-width: 993px) {
             transform: rotate(90deg);
@@ -265,4 +255,16 @@
         position: relative;
         z-index: 2;
     }
+
+    @media (max-width: 992px) {
+        .prev,
+        .next {
+            display: none;
+        }
+    }
+}
+
+.swiper-vertival .swiper-wrapper,
+.swiper-vertical .swiper-wrapper {
+    flex-direction: column;
 }

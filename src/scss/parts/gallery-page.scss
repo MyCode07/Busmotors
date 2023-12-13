@@ -1,9 +1,9 @@
 .gallery-page {
     @include adaptive-value("padding-top", 204, 105, 1);
 
-    h2 {
+    h1 {
         text-align: center;
-        @include adaptive-value("margin-bottom", 123, 32, 1);
+        @include adaptive-value("margin-bottom", 85, 5, 1);
         width: 100%;
     }
 

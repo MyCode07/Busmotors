@@ -106,11 +106,11 @@ function animateStagger(elem) {
     if (elem) {
         gsap.to(elem, {
             opacity: 1,
-            duration: 0.5,
+            duration: 0.3,
             x: 0,
             y: 0,
             ease: 'ease',
-            stagger: 0.3
+            stagger: 0.2
         });
     }
 }

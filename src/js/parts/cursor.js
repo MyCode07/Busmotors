@@ -1,20 +1,26 @@
+import { isMobile } from "../utils/isMobile.js";
+
 // set the starting position of the cursor outside of the screen
 let clientX = -100;
 let clientY = -100;
 let lastX = -100;
 let lastY = -100;
 const cursor = document.querySelector('.cursor')
-const section = document.querySelector('.projects')
+const sections = document.querySelectorAll('.cursor-block')
 
 // Show/hide the cursor when it is over the section
-if (section) {
-    section.addEventListener('mouseenter', () => {
-        cursor.classList.add('visible')
-    })
+if (sections.length) {
+    if (!isMobile.any() || window.innerWidth > 768) {
+        sections.forEach(section => {
+            section.addEventListener('mouseenter', () => {
+                cursor.classList.add('visible')
+            })
 
-    section.addEventListener('mouseleave', () => {
-        cursor.classList.remove('visible')
-    })
+            section.addEventListener('mouseleave', () => {
+                cursor.classList.remove('visible')
+            })
+        })
+    }
 }
 
 // function for linear interpolation of values

@@ -1,4 +1,7 @@
 .form {
+    z-index: 1;
+    position: relative;
+
     // .form__row
 
     &__row {
@@ -148,14 +151,6 @@
         }
     }
 
-    ._btn {
-        width: 228px;
-
-        @media (max-width: 768px) {
-            width: 100%;
-        }
-    }
-
     // .form__button
 
     &__button {
@@ -170,6 +165,8 @@
             width: 100%;
             margin-bottom: 19px;
             cursor: pointer;
+
+            width: 100%;
         }
 
         p {
@@ -190,5 +187,19 @@
 
     &__img {
         max-width: 841px;
+    }
+}
+
+section:not(.contacts) .form__button {
+    input,
+    button {
+        background-color: $black;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $black;
+                color: $white;
+            }
+        }
     }
 }

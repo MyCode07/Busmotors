@@ -1,6 +1,8 @@
-.gallery-slide {
+.gallery-slider {
     .section__body {
         position: relative;
+        margin-inline: auto;
+        max-width: 1070px;
     }
 
     .slider-control {
@@ -26,66 +28,77 @@
         border-radius: 10px;
     }
 
-    .swiper-slide {
-        cursor: pointer;
-        z-index: 50;
-        width: fit-content;
+    .swiper {
+        @media (max-width: 768px) {
+            max-width: none;
+            width: 100vw;
+            margin-left: -16px;
+            padding: 0 16px;
+        }
     }
 
-    .mySwiper2 {
+    .swiper-slide {
+        cursor: pointer;
+    }
+
+    .slider-main {
+        .swiper-slide {
+            position: relative;
+            padding-bottom: 60.5%;
+        }
+
         img {
             border-radius: 10px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 
-            @media (min-width: 993px) {
-                height: 649px;
+    .slider-thumbs {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        .swiper {
+            @media (min-width: 769px) {
+                margin: 0 13px;
             }
+        }
 
-            @media (max-width: 992px) {
-                height: 450px;
+        .swiper-slide {
+            opacity: 0.4;
+            height: 60px;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                border-radius: 5px;
             }
 
             @media (max-width: 768px) {
-                height: 209px;
-            }
-        }
-    }
-
-    .mySwiper {
-        margin-top: 20px;
-
-        @media (min-width: 769px) {
-            overflow: hidden;
-            width: 1024px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        @media (max-width: 768px) {
-            width: 100vw;
-            margin-left: -16px;
-            padding-left: 16px;
-        }
-
-        img {
-            border-radius: 5px;
-
-            @media (min-width: 993px) {
-                width: 98px;
-                height: 60px;
-            }
-
-            @media (max-width: 992px) {
-                width: 81px;
+                width: 86px;
                 height: 50px;
             }
         }
-    }
 
-    .mySwiper .swiper-slide {
-        opacity: 0.4;
-    }
+        .swiper-slide-thumb-active {
+            opacity: 1;
+        }
 
-    .mySwiper .swiper-slide-thumb-active {
-        opacity: 1;
+        @media (max-width: 768px) {
+            .prev,
+            .next {
+                display: none;
+            }
+        }
     }
 }

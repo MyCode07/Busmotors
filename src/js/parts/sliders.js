@@ -28,106 +28,94 @@ if (sliders.length) {
                 },
 
                 breakpoints: {
-                    320: {
+                    300: {
                         spaceBetween: 20
                     },
-                    768: {
+                    769: {
                         spaceBetween: 30
                     }
                 }
             })
         }
+        else if (section.classList.contains('gallery-slider')) {
+            const thumbs = new Swiper('.slider-thumbs .swiper', {
+                modules: [
+                    FreeMode
+                ],
+                freeMode: true,
+                watchSlidesProgress: true,
+                breakpoints: {
+                    300: {
+                        spaceBetween: 4,
+                        slidesPerView: 'auto',
+                    },
+                    769: {
+                        spaceBetween: 17,
+                        slidesPerView: 9,
+                    }
+                }
+            });
+
+            new Swiper('.slider-main .swiper', {
+                modules: [
+                    Navigation, Pagination, Scrollbar, Thumbs
+                ],
+                spaceBetween: 20,
+                slidesPerView: 1,
+                navigation: {
+                    prevEl: prev,
+                    nextEl: next,
+                },
+                thumbs: {
+                    swiper: thumbs,
+                },
+            });
+        }
+        else if (section.classList.contains('single-car')) {
+            const thumbs = new Swiper('.slider-thumbs .swiper', {
+                modules: [
+                    FreeMode
+                ],
+                freeMode: true,
+                watchSlidesProgress: true,
+                breakpoints: {
+                    300: {
+                        spaceBetween: 7,
+                        direction: 'horizontal',
+                        slidesPerView: 6,
+                    },
+                    993: {
+                        spaceBetween: 12,
+                        direction: 'vertival',
+                        slidesPerView: 'auto',
+                    }
+                },
+                on: {
+                    resize: () => {
+
+                    }
+                }
+            });
+
+            new Swiper('.slider-main .swiper', {
+                modules: [
+                    Navigation, Pagination, Scrollbar, Thumbs
+                ],
+                spaceBetween: 20,
+                slidesPerView: 1,
+                navigation: {
+                    prevEl: prev,
+                    nextEl: next,
+                },
+                pagination: {
+                    el: pagination,
+                    clickable: true,
+                    type: 'fraction',
+                },
+                thumbs: {
+                    swiper: thumbs,
+                },
+            });
+        }
     })
-}
-
-import { Fancybox } from "@fancyapps/ui";
-
-Fancybox.bind("[data-fancybox]", {
-    beforeClose: function (instance, slide) {
-        console.log(slide)
-    }
-});
-
-
-if (document.querySelector('.gallery-slide')) {
-    var swiper123 = new Swiper(".mySwiper", {
-        modules: [
-            Navigation, Pagination, Scrollbar, Thumbs, FreeMode
-        ],
-        slidesPerView: 'auto',
-        freeMode: true,
-        watchSlidesProgress: true,
-        breakpoints: {
-            320: {
-                spaceBetween: 4,
-
-            },
-            768: {
-                spaceBetween: 17,
-
-            }
-        }
-    });
-
-    new Swiper(".mySwiper2", {
-        modules: [
-            Navigation, Pagination, Scrollbar, Thumbs
-        ],
-        spaceBetween: 10,
-        navigation: {
-            nextEl: ".next",
-            prevEl: ".prev",
-        },
-        thumbs: {
-            swiper: swiper123,
-        },
-    });
-}
-
-if (document.querySelector('.single')) {
-    var swiper123 = new Swiper(".mySwiper", {
-
-        modules: [
-            FreeMode
-        ],
-        direction: 'vertival',
-        slidesPerView: 'auto',
-        freeMode: true,
-        watchSlidesProgress: true,
-        spaceBetween: 12,
-
-        breakpoints: { 
-            320: {
-                spaceBetween: 7,
-                direction: 'horizontal',
-            },
-            768: {
-                spaceBetween: 12,
-            },
-            993: {
-                direction: 'vertival',
-            }
-        }
-    });
-
-    new Swiper(".mySwiper2", {
-        modules: [
-            Navigation, Pagination, Scrollbar, Thumbs
-        ],
-        spaceBetween: 10,
-        navigation: {
-            nextEl: ".next",
-            prevEl: ".prev",
-        },
-
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            type: "fraction",
-        },
-
-        thumbs: {
-            swiper: swiper123,
-        },
-    });
 }
