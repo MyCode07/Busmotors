@@ -39,7 +39,6 @@
 
     nav {
         margin-bottom: 55px;
-        font-family: DINPro;
 
         ul {
             display: flex;
@@ -59,8 +58,6 @@
 
                 a {
                     font-size: 24px;
-                    font-family: DINCondensedC;
-
                     letter-spacing: -0.02em;
                     text-transform: uppercase;
                     display: block;
@@ -78,7 +75,7 @@
                         width: 9px;
                         height: 6px;
                         fill: currentColor;
-
+                        pointer-events: none;
                         margin-left: auto;
                     }
                 }
@@ -124,8 +121,7 @@
                             width: 100%;
                             white-space: wrap;
                             font-size: 20px;
-                            font-family: DINCondensedC;
-
+                            font-family: DINCondensedC !important;
                             line-height: 1.1;
                         }
                     }

@@ -74,10 +74,14 @@ if (sliders.length) {
         else if (section.classList.contains('single-car')) {
             const thumbs = new Swiper('.slider-thumbs .swiper', {
                 modules: [
-                    FreeMode
+                    FreeMode, Pagination
                 ],
                 freeMode: true,
                 watchSlidesProgress: true,
+                pagination: {
+                    el: pagination,
+                    type: 'fraction',
+                },
                 breakpoints: {
                     300: {
                         spaceBetween: 7,

@@ -12,11 +12,10 @@ if (burger) {
     burger.addEventListener('click', (е) => {
         burger.classList.toggle('_active');
         menu.classList.toggle('_open');
+
         document.body.classList.toggle('_noscroll');
-
-
         if (!header.classList.contains('_scrolled')) {
-            header.classList.toggle('_sticky');
+            header.classList.toggle('_open');
         }
 
         if (menu.classList.contains('_open')) lockPadding();
@@ -98,10 +97,7 @@ if (submenuList.length) {
 
 document.addEventListener('click', function (e) {
     let targetEl = e.target;
-
-    if ((!targetEl.closest('header nav') || (targetEl.closest('header') && targetEl.tagName == 'NAV')) && window.innerWidth > 1024) {
+    if ((!targetEl.closest('header nav') || (targetEl.closest('header') && targetEl.tagName == 'NAV'))) {
         const activeMenuItems = document.querySelectorAll('nav li[data-open]');
-        if (activeMenuItems.length)
-            activeMenuItems.forEach(item => item.removeAttribute('data-open'))
     }
 })

@@ -51,4 +51,4 @@ function tickerDirection() {
         }
     }
 }
-tickerDirection()
+tickerDirection() 

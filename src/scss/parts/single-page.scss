@@ -1,5 +1,5 @@
 .single-car {
-    padding-top: 200px;
+    @include adaptive-value("padding-top", 200, 105, 1);
 
     h1 {
         text-align: left;
@@ -74,9 +74,17 @@
             align-items: center;
             border-radius: 10px;
             background-color: #3c3e44;
+            letter-spacing: -0.02em;
+            font-size: 14px;
 
-            @media (max-width: 992px) {
-                display: none;
+            @media (max-width: 768px) {
+                margin-top: 0;
+                margin-bottom: 21px;
+                padding: 12px 14px;
+            }
+
+            @media (max-width: 425px) {
+                font-size: 12px;
             }
         }
 
@@ -126,6 +134,7 @@
         max-width: 524px;
         flex: 1 1 auto;
         width: calc(100% - 110px);
+        position: relative;
 
         @media (max-width: 992px) {
             max-width: none;
@@ -215,7 +224,7 @@
         }
     }
 
-    .swiper-pagination {
+    .pagination {
         position: absolute;
         left: 16px;
         bottom: 16px;
@@ -231,12 +240,6 @@
         font-size: 12px;
         font-weight: 700;
         letter-spacing: -0.02em;
-
-        display: none;
-
-        @media (max-width: 992px) {
-            display: block;
-        }
     }
 
     .next {

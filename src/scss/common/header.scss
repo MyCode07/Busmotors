@@ -8,8 +8,11 @@
     border-bottom: 1px solid rgba($color: $white, $alpha: 0.2);
 
     &._sticky {
-        background: linear-gradient(180deg, #1a1c23 0%, rgba(21, 23, 38, 0) 111.57%), #212226;
-        background-color: #212226;
+        background: linear-gradient(180deg, rgba(21, 23, 38, 0.95) 0%, rgba(21, 23, 38, 0.95) 111.57%);
+    }
+
+    &._open {
+        background: #212226;
     }
 
     // .header__container
@@ -93,6 +96,7 @@
     &__burger {
         display: block;
         position: relative;
+        margin-left: 31px;
         @include adaptive-value("width", 34, 25, 1);
         height: 20px;
 
@@ -153,18 +157,11 @@
                 }
             }
         }
-
-        display: none;
-
-        @media (max-width: 1024px) {
-            display: block;
-        }
     }
 
     nav {
         margin-inline: auto;
         padding-top: 34px;
-        font-family: DINPro;
 
         @media (max-width: 1024px) {
             display: none;
@@ -174,7 +171,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
 
             &::-webkit-scrollbar {
                 width: 4px;
@@ -328,7 +325,7 @@
                                 width: 20px;
                                 height: 40px;
                                 opacity: 0;
-                                left: 316px;
+                                left: 280px;
 
                                 @media (any-hover: none) {
                                     display: none;
@@ -376,8 +373,9 @@
                             width: 100%;
                             white-space: wrap;
                             font-size: 16px;
-                            font-weight: 700;
+                            font-weight: 400;
                             line-height: 1.1;
+                            font-family: DINCondensedC;
                             text-transform: uppercase;
                         }
 
