@@ -7,12 +7,35 @@
     transition: background-color 0.3s ease 0s;
     border-bottom: 1px solid rgba($color: $white, $alpha: 0.2);
 
-    &._sticky {
+    &:before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
         background: linear-gradient(180deg, rgba(21, 23, 38, 0.95) 0%, rgba(21, 23, 38, 0.95) 111.57%);
+
+        pointer-events: none;
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+
+        @media (max-width: 1024px) {
+            background: #212226;
+        }
+    }
+
+    &._sticky {
+        &:before {
+            opacity: 1;
+        }
     }
 
     &._open {
-        background: #212226;
+        &:before {
+            opacity: 1;
+        }
     }
 
     // .header__container
@@ -76,6 +99,7 @@
         svg,
         img {
             @include adaptive-value("width", 239, 167, 1);
+            max-height: 33px;
         }
     }
 

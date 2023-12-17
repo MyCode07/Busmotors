@@ -5,19 +5,31 @@
     width: 100%;
     height: 100%;
     margin-right: 0;
-    z-index: 16;
+    z-index: 17;
     overflow-y: auto;
     padding-bottom: 90px;
-    padding-top: 112px;
-
-    transform: translate3d(100%, 0, 0);
-    transition: all 0.3s ease 0s;
+    padding-top: 200px;
     background-color: #212226;
     color: $white;
+    overflow: hidden;
+
+    overflow-y: auto;
+    transform: translate3d(0, -100px, 0);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease 0s;
 
     &._open {
         transform: translate3d(0, 0, 0);
+        opacity: 1;
+        pointer-events: all;
     }
+
+    @media (max-width: 1024px) {
+        z-index: 16;
+        padding-top: 112px;
+    }
+
     // .menu__container
 
     &__container {
@@ -28,47 +40,136 @@
     &__body {
     }
 
-    .inner-ul {
-        flex: 0 0 100%;
-        width: 100%;
-        max-height: 0;
-        height: 100%;
-        transition: max-height 0.3s ease 0s;
-        overflow: hidden;
+    // .menu__close
+
+    &__close {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #2f3036;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 52px;
+        right: 75px;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+
+        svg,
+        img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            pointer-events: none;
+            stroke: $white;
+        }
+    }
+
+    // .menu__flex
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        max-width: 1090px;
+        margin: 0 auto;
+
+        @media (max-width: 1024px) {
+            display: block;
+            gap: 0;
+        }
+
+        // .menu__flex-left
+
+        &-left {
+            max-width: 444px;
+            width: 48%;
+
+            @media (max-width: 1024px) {
+                max-width: none;
+                width: 100%;
+            }
+        }
+
+        // .menu__flex-right
+
+        &-right {
+            max-width: 324px;
+            width: 48%;
+
+            @media (max-width: 1024px) {
+                max-width: none;
+                width: 100%;
+            }
+        }
     }
 
     nav {
-        margin-bottom: 55px;
+        @media (max-width: 1024px) {
+            margin-bottom: 55px;
+        }
+
+        .inner-ul {
+            display: none;
+
+            @media (max-width: 1024px) {
+                display: block;
+                flex: 0 0 100%;
+                width: 100%;
+                max-height: 0;
+                height: 100%;
+                transition: max-height 0.3s ease 0s;
+                overflow: hidden;
+            }
+        }
 
         ul {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            & > :not(:last-child) {
+                margin-bottom: 22px;
+
+                @media (max-width: 1024px) {
+                    margin-bottom: 16px;
+                }
+            }
 
             li {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 16px 0;
                 width: 100%;
-                flex-wrap: wrap;
-                border-bottom: 1px solid rgba($color: $white, $alpha: 0.2);
                 transition: all 0.3s ease 0s;
 
+                @media (max-width: 1024px) {
+                    padding-bottom: 16px;
+                    border-bottom: 1px solid rgba($color: $white, $alpha: 0.2);
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+                }
+
                 a {
-                    font-size: 24px;
                     letter-spacing: -0.02em;
                     text-transform: uppercase;
                     display: block;
-                    white-space: nowrap;
+                    font-size: 40px;
+                    max-width: calc(100% - 40px);
+
+                    @media (max-width: 1024px) {
+                        font-size: 24px;
+                    }
                 }
 
                 button {
-                    transition: all 0.3s ease 0s;
+                    display: none;
                     flex: 0 0 auto;
                     margin-right: 0;
                     flex: 1 1 auto;
+                    transition: all 0.3s ease 0s;
+
+                    @media (max-width: 1024px) {
+                        display: block;
+                    }
 
                     svg {
                         transition: all 0.3s ease 0s;
@@ -80,7 +181,15 @@
                     }
                 }
 
+                @media (any-hover: hover) {
+                    &:hover {
+                        color: rgba($color: $white, $alpha: 0.5);
+                    }
+                }
+
                 &[data-open] {
+                    color: rgba($color: $white, $alpha: 0.5);
+
                     .inner-ul {
                         max-height: 100vh;
                         transition: max-height 0.3s ease 0s;
@@ -104,7 +213,7 @@
                     width: 100%;
                     max-height: 0;
                     height: auto;
-                    padding: 30px 0 30px 18px;
+                    padding: 40px 0 24px 18px;
                     overflow: hidden;
 
                     & > :not(:last-child) {
@@ -121,7 +230,6 @@
                             width: 100%;
                             white-space: wrap;
                             font-size: 20px;
-                            font-family: DINCondensedC !important;
                             line-height: 1.1;
                         }
                     }
@@ -133,13 +241,18 @@
     // .menu__btns
 
     &__btns {
-        display: flex;
-        flex-direction: column;
+        display: none;
         width: 100%;
-        gap: 11px;
-        margin-bottom: 51px;
 
-        button {
+        & > :not(:last-child) {
+            margin-bottom: 11px;
+        }
+
+        @media (max-width: 1024px) {
+            display: block;
+        }
+
+        ._btn  {
             width: 100%;
         }
     }
@@ -147,12 +260,15 @@
     label {
         color: rgba($color: $white, $alpha: 0.5);
 
-        font-size: 12px;
-        font-family: DINCondensedC;
-
+        font-family: DINPro;
+        font-weight: 700;
         letter-spacing: -0.05em;
         text-transform: uppercase;
         display: block;
+
+        @media (max-width: 1024px) {
+            font-size: 12px;
+        }
     }
 
     // .menu__phone
@@ -161,36 +277,43 @@
         display: flex;
         flex-direction: column;
         gap: 16px;
-        margin-bottom: 33px;
+        margin-bottom: 58px;
+
+        @media (max-width: 1024px) {
+            margin-bottom: 33px;
+        }
 
         a {
             color: $white;
-            font-size: 30px;
-            font-family: DINCondensedC;
-
+            font-size: 40px;
             line-height: 1.1;
+
+            @media (max-width: 1024px) {
+                font-size: 30px;
+            }
         }
     }
 
     // .menu__contacts
 
     &__contacts {
-        & > :not(:last-child) {
-            margin-bottom: 16px;
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
 
         ._btn-social {
             display: flex;
             gap: 9px;
             max-width: 208px;
             width: 100%;
+            font-size: 14px;
+            font-family: DINPro;
+            color: $white;
+            font-weight: 500;
+            letter-spacing: -0.02em;
 
-            span {
-                color: $white;
-                font-family: DINPro;
-                font-size: 14px;
-                font-weight: 500;
-                letter-spacing: -0.02em;
+            @media (max-width: 1024px) {
+                font-size: 12px;
             }
 
             svg {
@@ -199,11 +322,24 @@
                 flex: 0 0 auto;
             }
         }
+
+        // .menu__contacts-body
+
+        &-body {
+            & > :not(:last-child) {
+                margin-bottom: 17px;
+            }
+        }
     }
 
     ._ticker {
+        margin-top: 115px;
         margin-bottom: 64px;
         padding: 12px 0;
+
+        @media (max-width: 1024px) {
+            margin-top: 50px;
+        }
 
         // ._ticker-text
 

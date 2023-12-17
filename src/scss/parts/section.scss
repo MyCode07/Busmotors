@@ -586,13 +586,19 @@
                     display: none;
                 }
 
-                img {
+                div {
                     position: absolute;
                     left: 0;
                     top: 0;
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
+
+                    img,
+                    picture {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
                 }
             }
 
@@ -625,22 +631,17 @@
                     color: $white;
                     font-family: DINPro;
 
-                    svg {
-                        flex: 0 0 auto;
+                    .fill {
                         width: 61px;
                         height: 61px;
-
-                        stroke: $white;
-                        fill: none;
-
-                        &.fill {
-                            stroke: none;
-                            fill: $white;
-                        }
 
                         @media (max-width: 768px) {
                             width: 45px;
                             height: 45px;
+                        }
+
+                        svg {
+                            flex: 0 0 auto;
                         }
                     }
 

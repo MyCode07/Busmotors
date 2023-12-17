@@ -7,21 +7,16 @@
                         <use xlink:href="@img/svg/icons.svg#video"></use>
                     </svg>
                 </button>
-
-                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20231020170918/Thumbnail-(1).jpg"
-                    id="video-thumbnail">
+                <div id="video-thumbnail">
+                    <img src="@img/video.png">
+                </div>
                 <video id="video">
-
-                    <!-- Video source -->
                     <source
                         src="https://media.geeksforgeeks.org/wp-content/uploads/20231020155223/Full-Stack-Development-_-LIVE-Classes-_-GeeksforGeeks.mp4"
                         type="video/mp4">
                 </video>
 
-                <!-- Controlers continer -->
                 <div class="controls">
-
-                    <!-- Left controller div -->
                     <div class="left">
                         <button id="skipminus-10">
                             <i class="fa-solid fa-backward"></i>
@@ -33,8 +28,6 @@
                             <i class="fa-solid fa-forward"></i>
                         </button>
                     </div>
-
-                    <!-- div for progress bar -->
                     <div class="video-timer">
                         <span id="current-time">00:00</span>
                         <span id="separator">/</span>
@@ -45,7 +38,6 @@
 
                     </div>
 
-                    <!-- Right controller div -->
                     <div class="right">
                         <div class="volume-container">
                             <div id="mute">

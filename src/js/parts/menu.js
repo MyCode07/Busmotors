@@ -100,4 +100,16 @@ document.addEventListener('click', function (e) {
     if ((!targetEl.closest('header nav') || (targetEl.closest('header') && targetEl.tagName == 'NAV'))) {
         const activeMenuItems = document.querySelectorAll('nav li[data-open]');
     }
+
+    if (targetEl.classList.contains('menu__close')) {
+        burger.classList.remove('_active');
+        menu.classList.remove('_open');
+
+        document.body.classList.remove('_noscroll');
+        if (!header.classList.contains('_scrolled')) {
+            header.classList.remove('_open');
+        }
+
+        if (!menu.classList.contains('_open')) unLockPadding();
+    }
 })

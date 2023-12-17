@@ -15,7 +15,6 @@ if (videoElement) {
     const maxDuration = videoElement.querySelector("#max-duration");
     const myplay = videoElement.querySelector(".play");
 
-
     const timeFormatter = (timeInput) => {
         let minute = Math.floor(timeInput / 60);
         minute = minute < 10 ? "0" + minute : minute;
@@ -24,11 +23,11 @@ if (videoElement) {
         return `${minute}:${second}`;
     };
 
-
     myplay.addEventListener("click", function (e) {
         if (video.paused) {
             myplay.style.transform = 'translate(-50%, -50%) scale(0)'
-        } else {
+        }
+        else {
             myplay.style.transform = 'translate(-50%, -50%) scale(1);'
         }
 
@@ -36,20 +35,21 @@ if (videoElement) {
             videoThumbnail.style.display = "none";
             video.play();
             playpause.innerHTML = '<i class="fa-solid fa-pause"></i>';
-        } else {
+        }
+        else {
             video.pause();
             playpause.innerHTML = '<i class="fa-solid fa-play"></i>';
         }
     });
 
-    // Play-Pause 
     playpause.addEventListener("click", function () {
         if (video.paused) {
             videoThumbnail.style.display = "none";
             video.play();
             playpause.innerHTML = '<i class="fa-solid fa-pause"></i>';
             myplay.style.transform = 'translate(-50%, -50%) scale(0)'
-        } else {
+        }
+        else {
             video.pause();
             playpause.innerHTML = '<i class="fa-solid fa-play"></i>';
         }
@@ -57,12 +57,12 @@ if (videoElement) {
 
     let isPlaying = false;
 
-    // Function to toggle play/pause 
     function togglePlayPause() {
         if (isPlaying) {
             video.pause();
             playpause.innerHTML = '<i class="fa-solid fa-play"></i>';
-        } else {
+        }
+        else {
             videoThumbnail.style.display = "none";
             video.play();
             playpause.innerHTML = '<i class="fa-solid fa-pause"></i>';
@@ -74,13 +74,10 @@ if (videoElement) {
         if (event.key === 32 || event.key === " ") {
             event.preventDefault();
 
-            // Prevent scrolling the page down 
             togglePlayPause();
         }
     });
 
-    // Event listener for the video to 
-    // update the isPlaying flag 
     video.addEventListener("play", function () {
         isPlaying = true;
     });
@@ -93,7 +90,6 @@ if (videoElement) {
         playpause.innerHTML = '<i class="fa-solid fa-play"></i>';
     });
 
-    // Forward 5 sec or backward 5 sec 
     frwd.addEventListener("click", function () {
         video.currentTime += 5;
     });
@@ -101,13 +97,13 @@ if (videoElement) {
         video.currentTime -= 5;
     });
 
-    // Mute or Unmute 
     mutebtn.addEventListener("click", function () {
         if (video.muted) {
             video.muted = false;
             mutebtn.innerHTML = '<i class="fas fa-volume-up"></i>';
             volume.value = video.volume;
-        } else {
+        }
+        else {
             video.muted = true;
             mutebtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
             volume.value = 0;
@@ -121,7 +117,8 @@ if (videoElement) {
                 video.muted = false;
                 mutebtn.innerHTML = '<i class="fas fa-volume-up"></i>';
                 volume.value = video.volume;
-            } else {
+            }
+            else {
                 video.muted = true;
                 mutebtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
                 volume.value = 0;
@@ -133,12 +130,12 @@ if (videoElement) {
         video.volume = volume.value;
         if (video.volume === 0) {
             mutebtn.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
-        } else {
+        }
+        else {
             mutebtn.innerHTML = '<i class="fas fa-volume-up"></i>';
         }
     });
 
-    // Hide or unhide controllers div 
     videoContainer.addEventListener("mouseenter", () => {
         controls.style.opacity = 1;
     });
@@ -147,7 +144,6 @@ if (videoElement) {
         controls.style.opacity = 0;
     });
 
-    // Update the playback line as the video plays 
     video.addEventListener("timeupdate", () => {
         const currentTime = video.currentTime;
         const duration = video.duration;
@@ -159,7 +155,6 @@ if (videoElement) {
         videoThumbnail.style.display = "block";
     }
 
-    // Reseting the playback line when the video ends 
     video.addEventListener("ended", () => {
         progressBar.style.width = "0%";
         showThumbnail();
