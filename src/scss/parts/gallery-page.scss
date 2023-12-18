@@ -1,12 +1,4 @@
 .gallery-page {
-    @include adaptive-value("padding-top", 204, 105, 1);
-
-    h1 {
-        text-align: center;
-        @include adaptive-value("margin-bottom", 85, 5, 1);
-        width: 100%;
-    }
-
     .grid {
         gap: 0;
         grid-template-columns: repeat(4, 1fr);

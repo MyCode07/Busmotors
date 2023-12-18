@@ -236,3 +236,12 @@ h4 {
         height: 18px;
     }
 }
+
+
+.swiper-button-disabled{
+    opacity: 0.5;
+}
+
+.swiper-button-lock{
+    display: none !important;
+}

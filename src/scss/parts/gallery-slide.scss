@@ -69,6 +69,8 @@
         }
 
         .swiper {
+            flex: 1 1 auto;
+
             @media (min-width: 769px) {
                 margin: 0 13px;
             }
@@ -77,6 +79,11 @@
         .swiper-slide {
             opacity: 0.4;
             height: 60px;
+
+            picture{
+                width: 100%;
+                height: 100%;
+            }
 
             img {
                 height: 100%;

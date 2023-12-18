@@ -66,22 +66,28 @@
         }
     }
 
-    .form {
+    // .popup__container
+
+    &__container {
+        max-width: 850px;
+    }
+
+    // .popup__content
+
+    &__content {
         background-color: $white;
         padding: 60px 95px;
         border-radius: 10px;
-        height: fit-content;
-        max-width: 850px;
-        width: 100%;
-        margin-left: auto;
-        margin-right: auto;
+        position: relative;
 
         @media (max-width: 992px) {
             padding: 30px 28px;
             margin-top: 0px;
             max-width: none;
         }
+    }
 
+    .form {
         // .form__item
 
         &__item {
