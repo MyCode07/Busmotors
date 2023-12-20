@@ -24,7 +24,6 @@ if (burger) {
 }
 
 
-
 if (menuLinks.length) {
     menuLinks.forEach(link => {
         link.addEventListener('click', (е) => {
@@ -56,11 +55,19 @@ if (submenuList.length) {
             const btn = li.querySelector('button');
 
 
-            if (btn && isMobile.any()) {
-                btn.addEventListener('click', function () {
-                    toggleMenu(li)
-                })
+            if (btn) {
+                if ((btn.closest('.menu') || btn.closest('.header')) && isMobile.any()) {
+                    btn.addEventListener('click', function () {
+                        toggleMenu(li)
+                    })
+                }
+                else {
+                    btn.addEventListener('click', function () {
+                        toggleMenu(li)
+                    })
+                }
             }
+
 
             const btnArrow = li.querySelector('.menu-arrow');
             if (btnArrow && isMobile.any()) {
@@ -92,7 +99,6 @@ if (submenuList.length) {
             item.removeAttribute('data-open')
         }
     }
-
 }
 
 document.addEventListener('click', function (e) {

@@ -1,7 +1,7 @@
 import { replaceDomElements } from "./static/replace.js";
 import { maskInputs } from "./static/inputmask.js";
 import { animateAction, animateStaggerAction } from "./parts/animations.js";
-// import { accordeon } from "./static/accordeon.js";
+import { accordeon } from "./static/accordeon.js";
 import { stickyHeader } from "./parts/header.js";
 
 import "./parts/menu.js";
@@ -17,7 +17,7 @@ import "./parts/popup.js";
 import { parallax } from "./parts/parallax.js";
 
 parallax();
-// accordeon();
+accordeon();
 animateAction()
 animateStaggerAction();
 maskInputs('+7 (999) 999-99-99', '._mask-phone')

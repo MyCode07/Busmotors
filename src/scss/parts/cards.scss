@@ -178,6 +178,15 @@
     flex-direction: column;
     min-height: 100%;
 
+    @media (any-hover: hover) {
+        &:hover {
+            ._btn {
+                background-color: $white;
+                color: #212226;
+            }
+        }
+    }
+
     // .service-card__img
 
     &__img {

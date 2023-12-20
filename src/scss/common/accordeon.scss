@@ -1,7 +1,7 @@
 [data-accordion] {
     [data-accordion-item] {
         &[data-open] {
-            [data-accordion-item-body] {
+            & > [data-accordion-item-body] {
                 grid-template-rows: 1fr;
             }
         }
