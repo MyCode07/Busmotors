@@ -59,10 +59,10 @@
 
                     <div class="card">
                         <div class="card__img">
-                            <img src="@img/card.png" alt="">
+                            <img src="" alt="">
                         </div>
-                        <h3 class="card__name">Mercedes-Benz Sprinter</h3>
-                        <span class="card__price">7 200 000 ₽</span>
+                        <h3 class="card__name"></h3>
+                        <span class="card__price"><span></span> ₽</span>
                     </div>
 
                     <div class="form__row">
@@ -87,13 +87,15 @@
                         </p>
                         <button class="_btn">Отправить</button>
                     </div>
+                    <input type="hidden" name="product_name">
+                    <input type="hidden" name="product_price">
                 </form>
             </div>
         </div>
     </div>
 </div>
 
-<div class="popup _fixed" id="thanks">
+<div class="popup _fixed _form" id="thanks">
     <div class="popup__container _container">
         <div class="popup__body">
             <div class="popup__content">
@@ -102,10 +104,30 @@
                         <path d="M1.03223 11.4689L11.97 0.531139M1.03223 0.531128L11.97 11.4689" />
                     </svg>
                 </button>
-                <h5>Спасибо</h5>
-                <p>Заявка успешно отправлена. Скоро наш менеджер свяжется с вами. Спасибо, что выбрали нашу компанию!
-                </p>
-                <a href="" class="_btn">на главную</a>
+                <div class="form">
+                    <h5>Спасибо</h5>
+                    <p>Заявка успешно отправлена. Скоро наш менеджер свяжется с вами. Спасибо, что выбрали нашу
+                        компанию!</p>
+                    <a href="" class="_btn">на главную</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup _fixed _form" id="erorr">
+    <div class="popup__container _container">
+        <div class="popup__body">
+            <div class="popup__content">
+                <button class="popup__close">
+                    <svg width="13" height="12" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.03223 11.4689L11.97 0.531139M1.03223 0.531128L11.97 11.4689" />
+                    </svg>
+                </button>
+                <div class="form">
+                    <h5>Ошибка!</h5>
+                    <p>Пожалуйста повторите попытку позже.</p>
+                </div>
             </div>
         </div>
     </div>

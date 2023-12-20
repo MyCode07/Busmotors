@@ -122,7 +122,6 @@
         font-size: 32px;
 
         font-style: normal;
-        font-family: DINCondensedC;
 
         line-height: 90%;
         text-transform: uppercase;
@@ -202,4 +201,15 @@ section:not(.contacts) .form__button {
             }
         }
     }
+}
+
+.wpcf7-response-output {
+    display: none !important;
+}
+
+.wpcf7-spinner {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    margin: 0;
 }
