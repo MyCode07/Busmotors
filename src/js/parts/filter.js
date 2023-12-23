@@ -1,6 +1,9 @@
+import { isMobile } from '../utils/isMobile.js';
 const filters = document.querySelectorAll('.catalog__filters-item');
 
-if (filters.length) {
+
+if (filters.length && isMobile.any()) {
+
     filters.forEach(item => {
         const btn = item.querySelector('button');
 
@@ -8,17 +11,6 @@ if (filters.length) {
             btn.addEventListener('click', () => {
                 toggleTarget(item, filters, '_active');
             })
-
-            const ul = btn.nextElementSibling
-            if (ul) {
-                const options = ul.querySelectorAll('li');
-                if (options)
-                    options.forEach(opt => {
-                        opt.addEventListener('click', (e) => {
-                            toggleTarget(opt, options, '_selected');
-                        })
-                    })
-            }
         }
     });
 }
@@ -45,3 +37,4 @@ document.addEventListener('click', function (e) {
     }
 
 })
+ 

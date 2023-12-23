@@ -66,6 +66,11 @@
         }
     }
 
+    h5 {
+        @include adaptive-value("font-size", 50, 28, 1);
+        @include adaptive-value("margin-bottom", 80, 47, 1);
+    }
+
     // .popup__container
 
     &__container {
@@ -93,20 +98,6 @@
         &__item {
             border-bottom: 1px solid rgba($color: #5b5555, $alpha: 0.5);
 
-            @media (any-hover: hover) {
-                &:hover {
-                    span {
-                        font-size: 13px;
-
-                        @media (max-width: 768px) {
-                            font-size: 10px;
-                        }
-                    }
-
-                    border-color: $black;
-                }
-            }
-
             span {
                 color: #5b5555;
                 font-size: 18px;
@@ -116,9 +107,24 @@
                 }
             }
 
-            input {
+            input,
+            textarea {
                 color: $black;
-                padding-bottom: 8px;
+                padding-bottom: 9px;
+                font-size: 18px;
+
+                &._active,
+                &:focus,
+                &:active {
+                    + span {
+                        font-size: 12px;
+                        transform: translate(0, calc(-100% - 7px));
+
+                        @media (max-width: 768px) {
+                            font-size: 10px;
+                        }
+                    }
+                }
             }
 
             &._error {
@@ -134,12 +140,31 @@
                     }
                 }
             }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    span {
+                        font-size: 12px;
+                        transform: translate(0, calc(-100% - 7px));
+
+                        @media (max-width: 768px) {
+                            font-size: 10px;
+                        }
+                    }
+
+                    border-color: $black;
+                }
+            }
         }
 
         // .form__row
 
         &__row {
             gap: 23px;
+
+            &:not(:first-of-type) {
+                @include adaptive-value("margin-top", 81, 55, 1);
+            }
 
             @media (max-width: 768px) {
                 flex-direction: column;
@@ -158,17 +183,6 @@
         &__button {
             margin-top: 34px;
 
-            button {
-                transition: all 0.3s ease 0s;
-
-                @media (any-hover: hover) {
-                    &:hover {
-                        color: $white;
-                        background-color: rgba(000, 000, 000, 0.8);
-                    }
-                }
-            }
-
             p {
                 color: #969393 !important;
                 text-align: left;
@@ -181,6 +195,17 @@
 
             a {
                 color: $black;
+            }
+        }
+
+        ._btn {
+            transition: all 0.3s ease 0s;
+
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $white;
+                    background: #4a4a4a;
+                }
             }
         }
     }

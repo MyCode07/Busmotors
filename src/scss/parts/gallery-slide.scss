@@ -24,6 +24,11 @@
         }
     }
 
+    .prev,
+    .next {
+        display: none;
+    }
+
     .swiper-slide-active {
         border-radius: 10px;
     }
@@ -80,7 +85,7 @@
             opacity: 0.4;
             height: 60px;
 
-            picture{
+            picture {
                 width: 100%;
                 height: 100%;
             }

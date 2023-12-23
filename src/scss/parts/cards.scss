@@ -50,12 +50,23 @@
         padding-bottom: 92.7%;
         display: block;
         margin-bottom: 22px;
+        overflow: hidden;
 
         @media (max-width: 500px) {
             padding-bottom: 84.2%;
         }
 
+        @media (any-hover: hover) {
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
         img {
+            transition: all 0.3s ease 0s;
+
             position: absolute;
             left: 0;
             top: 0;
@@ -63,6 +74,17 @@
             height: 100%;
             object-fit: cover;
         }
+    }
+
+    label {
+        display: block;
+        margin-bottom: 17px;
+        color: #7e7272;
+        font-family: DINCondensedC;
+        font-size: 14px;
+        font-style: normal;
+        line-height: 110%;
+        text-transform: uppercase;
     }
 
     div {

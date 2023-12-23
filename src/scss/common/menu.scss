@@ -324,7 +324,6 @@
         }
 
         // .menu__contacts-body
-
         &-body {
             & > :not(:last-child) {
                 margin-bottom: 17px;
@@ -335,20 +334,9 @@
     ._ticker {
         margin-top: 115px;
         margin-bottom: 64px;
-        padding: 12px 0;
 
         @media (max-width: 1024px) {
             margin-top: 50px;
-        }
-
-        // ._ticker-text
-
-        &-text {
-            svg {
-                width: 136px;
-                height: 20px;
-                flex: 0 0 auto;
-            }
         }
     }
 }

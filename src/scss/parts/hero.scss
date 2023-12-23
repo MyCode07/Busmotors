@@ -22,6 +22,22 @@
         @include adaptive-value("height", 646, 421, 1);
     }
 
+    &.news-page {
+        .parallax-item {
+            height: 150%;
+        }
+
+        .hero__content,
+        .hero__body {
+            height: 100%;
+            justify-content: center;
+        }
+
+        h1 {
+            margin-bottom: 0;
+        }
+    }
+
     // .hero__bgi
 
     &__bgi {

@@ -18,7 +18,7 @@ export const parallax = () => {
                 ease: Power2.easeInOut,
                 // markers: true
             },
-            y: "-25%"
+            y: "-20%"
         })
     })
 }

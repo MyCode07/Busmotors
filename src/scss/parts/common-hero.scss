@@ -58,7 +58,7 @@
 
     .back {
         position: absolute;
-        bottom: 14px;
+        bottom: 27px;
         left: 77px;
         display: flex;
         align-items: center;
@@ -191,6 +191,7 @@
 
                 @media (max-width: 768px) {
                     left: 50%;
+                    transform: translate3d(-50%, 10px, 0);
                 }
 
                 @media (max-width: 425px) {
