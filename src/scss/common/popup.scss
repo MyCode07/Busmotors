@@ -162,7 +162,7 @@
         &__row {
             gap: 23px;
 
-            &:not(:first-of-type) {
+            & + .form__row {
                 @include adaptive-value("margin-top", 81, 55, 1);
             }
 
@@ -216,6 +216,8 @@
         border-radius: 10px;
         background: #f8f8f8;
         padding: 15px;
+
+        @include adaptive-value("margin-bottom", 81, 55, 1);
 
         @media (max-width: 768px) {
             flex-direction: column;

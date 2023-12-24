@@ -10,7 +10,7 @@
         gap: 30px;
         width: 100%;
 
-        &:not(:first-of-type) {
+        & + .form__row {
             @include adaptive-value("margin-top", 112, 77, 1);
         }
 

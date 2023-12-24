@@ -15,7 +15,7 @@
         width: 100%;
         height: 100%;
         z-index: -1;
-        background: linear-gradient(180deg, #1a1c23 0%, rgba(21, 23, 38, 0) 111.57%), #212226f6;
+        background: linear-gradient(180deg, #1a1c23 0%, rgba(21, 23, 38, 0) 111.57%), rgba($color: #212226, $alpha: 0.75);
         pointer-events: none;
         opacity: 0;
         transition: all 0.3s ease 0s;
