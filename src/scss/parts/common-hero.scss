@@ -123,9 +123,7 @@
         // .catalog__filters-item
 
         &-item {
-            @media (min-width: 769px) {
-                position: relative;
-            }
+            position: relative;
 
             button {
                 border-radius: 10px;
@@ -191,7 +189,6 @@
                 width: 223px;
 
                 @media (max-width: 768px) {
-                    left: 50%;
                     transform: translate3d(-50%, 10px, 0);
                 }
 
@@ -246,7 +243,7 @@
                 ul {
                     opacity: 1;
                     visibility: visible;
-                    transform: translate3d(-50%, 0, 0);
+                    transform: translate3d(0, 0, 0);
                 }
 
                 button img {
