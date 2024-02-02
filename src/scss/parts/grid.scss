@@ -13,6 +13,21 @@
         }
     }
 
+    // grid-2
+
+    &-2 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+
+        @media (max-width: 1024px) {
+            gap: 18px;
+        }
+
+        @media (max-width: 600px) {
+            display: block;
+        }
+    }
+
     // .grid-item
 
     &-item {

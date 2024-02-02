@@ -142,10 +142,6 @@
     max-width: 1070px;
     margin-inline: auto;
 
-    &:not(:last-child) {
-        @include adaptive-value("margin-bottom", 110, 82, 1);
-    }
-
     &-img {
         position: relative;
         padding-bottom: 60.7%;
@@ -166,28 +162,18 @@
 
     h3 {
         color: $white;
-        @include adaptive-value("font-size", 40, 24, 1);
+        @include adaptive-value("font-size", 36, 24, 1);
         text-transform: uppercase;
         display: block;
-
-        @media (max-width: 768px) {
-            margin-bottom: 30px;
-        }
     }
 
     div {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         @include adaptive-value("margin-top", 30, 20, 1);
-
-        @media (max-width: 768px) {
-            align-items: flex-start;
-            flex-direction: column;
-        }
     }
 
     ._btn {
+        margin-top: 12px;
+
         @media (min-width: 769px) {
             width: 191px;
         }
