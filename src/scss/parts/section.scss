@@ -1232,3 +1232,45 @@
 .gallery-page img {
     margin-top: 0 !important;
 }
+
+.news,
+.cars {
+    .scroll-wrapper {
+        .grid-item {
+            @media (max-width: 1024px) {
+                width: 281px;
+            }
+        }
+    }
+}
+
+.d3-anchors {
+    position: absolute;
+    z-index: 16;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0);
+    padding: 0 16px;
+    top: 110px;
+
+    padding: 3px;
+    border-radius: 7px;
+    background-color: $white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 1024px) {
+        top: 80px;
+    }
+
+    .current {
+        background-color: $black;
+        color: $white;
+    }
+
+    ._btn {
+        width: 160px;
+    }
+}

@@ -28,7 +28,8 @@
         transition: border-color 0.3s ease 0s;
 
         input,
-        textarea {
+        textarea,
+        select {
             padding-bottom: 17px;
             width: 100%;
             color: $white;
@@ -65,6 +66,10 @@
             resize: none;
         }
 
+        select {
+            cursor: pointer;
+        }
+
         span {
             transition: all 0.3s ease 0s;
             position: absolute;
@@ -88,7 +93,8 @@
 
             span,
             input,
-            textarea {
+            textarea,
+            select {
                 color: red;
 
                 &::placeholder {

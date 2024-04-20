@@ -108,7 +108,8 @@
             }
 
             input,
-            textarea {
+            textarea,
+            select {
                 color: $black;
                 padding-bottom: 9px;
                 font-size: 18px;
@@ -132,7 +133,8 @@
 
                 span,
                 input,
-                textarea {
+                textarea,
+                select {
                     color: red;
 
                     &::placeholder {
@@ -155,6 +157,14 @@
                     border-color: $black;
                 }
             }
+        }
+
+        h3 {
+            color: $black;
+            text-transform: unset;
+            @include adaptive-value("margin-top", 81, 55, 1);
+            @include adaptive-value("font-size", 20, 18, 1);
+            margin-bottom: 1em;
         }
 
         // .form__row
